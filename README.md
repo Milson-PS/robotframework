@@ -39,21 +39,6 @@
 
 
 
-## <img width="4%" title="Jenkins" src="img/logo/Jenkins.svg"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/VarlamovaNadezhda_qa_guru_10_diplom_ui/)
-
-Для запуска тестов из Jenkins:
-1. Необходимо нажать кнопку "Собрать с параметрами".
-<img src="img/screen/Screenshot_7.jpg" alt="Jenkins"/>
-2. Выбрать параметры.
-<img src="img/screen/Screenshot_8.jpg" alt="Jenkins"/>
-3. Нажать кнопку "Собрать".
-
-### :heavy_plus_sign: Параметры сборки
-
-> - BROWSER (браузер)
-> - BROWSER_VERSION (версия браузера)
-> - BROWSER_SIZE (размер окна браузера)
-> - THREADS (количество потоков)
 
 ## :computer: Запуск тестов из терминала
 
