@@ -42,14 +42,6 @@ robot Имя_файла.robot
 ```
 <img src="img/screen /ts1.gif" alt="gif" />
 
-Если вы хотите использовать эти функции в своем проекте, вы можете вызывать их при необходимости, например:
-
-python
-random_inn_ul = get_random_inn_ul()
-random_inn_fl = get_random_inn_fl()
-print(random_inn_ul)
-print(random_inn_fl)
-
 
 
 ## :bar_chart: Отчеты о прохождении тестов доступны в Allure
