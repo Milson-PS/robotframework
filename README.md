@@ -60,12 +60,5 @@ robot Имя файла.robot
 <img src="img/screen/AllureTests.jpg" alt="Allure"/>
 
 ##### Видео прохождение теста
-![This is an image](img/screen/ts.gif)
-
-Name	Last commit message	Last commit date
-parent directory
-..
-
-ts.gif
-
+<img src="img/screen/ts.gif" alt="gif"/>
 
