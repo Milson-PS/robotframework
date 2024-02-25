@@ -53,7 +53,8 @@ robot Имя_файла.robot
 
 #### Графики
 
-<img src="img/screen/ 2.png" alt="Allure"/>
+<img src="img/screen /2.png" alt="Allure"/> 
+
 <img src="img/screen/ 3.png" alt="Allure"/>
 <img src="img/screen/ 4.png" alt="Allure"/>
 #### Тесты
