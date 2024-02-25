@@ -70,7 +70,7 @@ robot Имя_файла.robot
 > - После объявления функций, код вызывает функции для генерации случайных ИНН для юридических и физических лиц и выводит их на экран.
 > - Вызов пример:
 > - ${random_inn}=    Get Random INN FL
-    input text      ${legal_field_inn}        ${random_inn}
+> - input text      ${legal_field_inn}        ${random_inn}
 
 
 
