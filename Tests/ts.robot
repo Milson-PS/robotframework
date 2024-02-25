@@ -140,29 +140,29 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
 
 
 *** Test Cases ***
-#Вход в лк
-#   Open browser     ${main_page}   ${browser}
-#   Maximize Browser Window
-#   click element       ${catalogButton}
-#   input text       ${login_input_field}    ${login}    # заменить на ${login}    для stage
-#   input password   ${login_pass_field}     ${password}   # заменить на ${password} для stage
-#   Wait Until Page Contains Element         ${the_login_button_submit}
-#   click element    ${the_login_button_submit}
-#   close browser
+Вход в лк
+   Open browser     ${main_page}   ${browser}
+   Maximize Browser Window
+   click element       ${catalogButton}
+   input text       ${login_input_field}    ${login}    # заменить на ${login}    для stage
+   input password   ${login_pass_field}     ${password}   # заменить на ${password} для stage
+   Wait Until Page Contains Element         ${the_login_button_submit}
+   click element    ${the_login_button_submit}
+   close browser
 
-#Смена пользователя
-#    Open browser     ${main_page}   ${browser}
-#    Maximize Browser Window
-#    click element       ${catalogButton}
-#    input text       ${login_input_field}    ${login}    # заменить на ${login}    для stage
-#    input password   ${login_pass_field}     ${password}   # заменить на ${password} для stage
-#    Wait Until Page Contains Element         ${the_login_button_submit}
-#    click element      ${the_login_button_submit}
-#    click element       ${Profile}
-#    click element       ${switch_profile}
-#    sleep    1s
-#    click element       ${change_user}
-#    sleep    2s
+Смена пользователя
+    Open browser     ${main_page}   ${browser}
+    Maximize Browser Window
+    click element       ${catalogButton}
+    input text       ${login_input_field}    ${login}    # заменить на ${login}    для stage
+    input password   ${login_pass_field}     ${password}   # заменить на ${password} для stage
+    Wait Until Page Contains Element         ${the_login_button_submit}
+    click element      ${the_login_button_submit}
+    click element       ${Profile}
+    click element       ${switch_profile}
+    sleep    1s
+    click element       ${change_user}
+    sleep    2s
 ##Проверка навигации
 #
 #   click element       ${catalogButton}

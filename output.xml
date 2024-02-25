@@ -1,349 +1,432 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.3 on darwin)" generated="2024-02-24T18:25:13.021776" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.3 on darwin)" generated="2024-02-25T10:04:32.144060" rpa="false" schemaversion="5">
 <suite id="s1" name="Ts" source="/Users/pavelmilyukov/PycharmProjects/robotframework/Tests/ts.robot">
-<test id="s1-t1" name="Добавить контрагента ИП" line="209">
+<test id="s1-t1" name="Вход в лк" line="143">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:13.152422" level="INFO">Opening browser 'Chrome' to base url 'https://www.citilink.ru'.</msg>
+<msg time="2024-02-25T10:04:32.232770" level="INFO">Opening browser 'Chrome' to base url 'https://www.citilink.ru'.</msg>
 <arg>${main_page}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-24T18:25:13.152195" elapsed="6.698391"/>
+<status status="PASS" start="2024-02-25T10:04:32.232648" elapsed="4.917519"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-24T18:25:19.857315" elapsed="0.466815"/>
+<status status="PASS" start="2024-02-25T10:04:37.151076" elapsed="0.476253"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:20.326027" level="INFO">Clicking element '//div[@data-meta-name= 'UserButtonContainer' and @class= 'css-1vb2hqj e38q5fc0']'.</msg>
+<msg time="2024-02-25T10:04:37.628166" level="INFO">Clicking element '//div[@data-meta-name= 'UserButtonContainer' and @class= 'css-1vb2hqj e38q5fc0']'.</msg>
 <arg>${catalogButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:20.324365" elapsed="0.096960"/>
+<status status="PASS" start="2024-02-25T10:04:37.627522" elapsed="0.102359"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:20.421746" level="INFO">Typing text '79118952395' into text field 'login'.</msg>
+<msg time="2024-02-25T10:04:37.730593" level="INFO">Typing text '79118952395' into text field 'login'.</msg>
 <arg>${login_input_field}</arg>
 <arg>${login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:20.421514" elapsed="0.212803"/>
+<status status="PASS" start="2024-02-25T10:04:37.730204" elapsed="0.171614"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:20.634601" level="INFO">Typing password into text field 'pass'.</msg>
-<msg time="2024-02-24T18:25:20.675002" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-02-25T10:04:37.902204" level="INFO">Typing password into text field 'pass'.</msg>
+<msg time="2024-02-25T10:04:37.935601" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${login_pass_field}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:20.634443" elapsed="0.087950"/>
+<status status="PASS" start="2024-02-25T10:04:37.902012" elapsed="0.079629"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${the_login_button_submit}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-02-24T18:25:20.722661" elapsed="2.827433"/>
+<status status="PASS" start="2024-02-25T10:04:37.981783" elapsed="2.790350"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:23.550873" level="INFO">Clicking element 'xpath=//button[@class='e4uhfkv0 css-1nvnwij e4mggex0']'.</msg>
+<msg time="2024-02-25T10:04:40.773059" level="INFO">Clicking element 'xpath=//button[@class='e4uhfkv0 css-1nvnwij e4mggex0']'.</msg>
 <arg>${the_login_button_submit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:23.550546" elapsed="3.237372"/>
+<status status="PASS" start="2024-02-25T10:04:40.772624" elapsed="3.535572"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-25T10:04:44.316096" elapsed="0.110073"/>
+</kw>
+<status status="PASS" start="2024-02-25T10:04:32.232234" elapsed="12.194150"/>
+</test>
+<test id="s1-t2" name="Смена пользователя" line="153">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-25T10:04:44.427133" level="INFO">Opening browser 'Chrome' to base url 'https://www.citilink.ru'.</msg>
+<arg>${main_page}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-25T10:04:44.426922" elapsed="4.546965"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-25T10:04:48.974326" elapsed="0.472545"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:26.789218" level="INFO">Clicking element '//div[@class= 'css-1wyvf5z eyoh4ac0']'.</msg>
-<arg>${Profile}</arg>
+<msg time="2024-02-25T10:04:49.449400" level="INFO">Clicking element '//div[@data-meta-name= 'UserButtonContainer' and @class= 'css-1vb2hqj e38q5fc0']'.</msg>
+<arg>${catalogButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:26.788377" elapsed="0.227041"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:27.016414" level="INFO">Clicking element '//a[@data-meta-name='ProfileMenu_Item_Компании']'.</msg>
-<arg>${legal_company}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:27.015776" elapsed="1.788564"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-02-24T18:25:29.807496" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-02-24T18:25:28.804784" elapsed="1.002965"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:29.808822" level="INFO">Clicking element '//span[contains(text(),'Добавить контрагента')]'.</msg>
-<arg>${add_counterparty}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:29.808129" elapsed="1.509389"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-02-24T18:25:32.318904" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-02-24T18:25:31.317652" elapsed="1.001438"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:32.320046" level="INFO">Clicking element '//input[@name='Contractor_legalForm']'.</msg>
-<arg>${legal_company_form}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:32.319388" elapsed="0.057887"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-02-24T18:25:33.379573" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-02-24T18:25:32.377422" elapsed="1.002230"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:33.379971" level="INFO">Clicking element '//div[contains(text(),'ИП')]'.</msg>
-<arg>${company_form_ip}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:33.379802" elapsed="0.040356"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-02-24T18:25:35.422025" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-02-24T18:25:33.420353" elapsed="2.003325"/>
-</kw>
-<kw name="Get Random Inn Fl" owner="inn_generator">
-<msg time="2024-02-24T18:25:35.426561" level="INFO">${random_inn} = 840409021487</msg>
-<var>${random_inn}</var>
-<doc>Get random Individual Entrepreneur INN</doc>
-<status status="PASS" start="2024-02-24T18:25:35.425211" elapsed="0.001376"/>
+<status status="PASS" start="2024-02-25T10:04:49.448158" elapsed="0.082305"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:35.427296" level="INFO">Typing text '840409021487' into text field '//input[@name='Contractor_inn']'.</msg>
+<msg time="2024-02-25T10:04:49.530886" level="INFO">Typing text '79118952395' into text field 'login'.</msg>
+<arg>${login_input_field}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-25T10:04:49.530598" elapsed="0.164785"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-25T10:04:49.695668" level="INFO">Typing password into text field 'pass'.</msg>
+<msg time="2024-02-25T10:04:49.736510" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${login_pass_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-25T10:04:49.695519" elapsed="0.088797"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${the_login_button_submit}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-25T10:04:49.784453" elapsed="2.780263"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-25T10:04:52.565083" level="INFO">Clicking element 'xpath=//button[@class='e4uhfkv0 css-1nvnwij e4mggex0']'.</msg>
+<arg>${the_login_button_submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-25T10:04:52.564893" elapsed="1.170819"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-25T10:04:53.736367" level="INFO">Clicking element '//div[@class= 'css-1wyvf5z eyoh4ac0']'.</msg>
+<msg time="2024-02-25T10:04:53.902323" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-02-25T10:04:53.902544" level="FAIL">Element with locator '//div[@class= 'css-1wyvf5z eyoh4ac0']' not found.</msg>
+<arg>${Profile}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-02-25T10:04:53.736075" elapsed="0.170678">Element with locator '//div[@class= 'css-1wyvf5z eyoh4ac0']' not found.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${switch_profile}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-25T10:04:53.906881" elapsed="0.000018"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-02-25T10:04:53.906955" elapsed="0.000010"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${change_user}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-25T10:04:53.907005" elapsed="0.000010"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-02-25T10:04:53.907050" elapsed="0.000009"/>
+</kw>
+<status status="FAIL" start="2024-02-25T10:04:44.426624" elapsed="9.480564">Element with locator '//div[@class= 'css-1wyvf5z eyoh4ac0']' not found.</status>
+</test>
+<test id="s1-t3" name="Добавить контрагента ИП" line="209">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-25T10:04:53.907691" level="INFO">Opening browser 'Chrome' to base url 'https://www.citilink.ru'.</msg>
+<arg>${main_page}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-25T10:04:53.907572" elapsed="4.668320"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-25T10:04:58.576768" elapsed="0.491464"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-25T10:04:59.069691" level="INFO">Clicking element '//div[@data-meta-name= 'UserButtonContainer' and @class= 'css-1vb2hqj e38q5fc0']'.</msg>
+<arg>${catalogButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-25T10:04:59.068843" elapsed="0.119409"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-25T10:04:59.189303" level="INFO">Typing text '79118952395' into text field 'login'.</msg>
+<arg>${login_input_field}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-25T10:04:59.188674" elapsed="0.165806"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-25T10:04:59.354800" level="INFO">Typing password into text field 'pass'.</msg>
+<msg time="2024-02-25T10:04:59.392390" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${login_pass_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-25T10:04:59.354633" elapsed="0.083008"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${the_login_button_submit}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-25T10:04:59.437791" elapsed="2.775762"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-25T10:05:02.214120" level="INFO">Clicking element 'xpath=//button[@class='e4uhfkv0 css-1nvnwij e4mggex0']'.</msg>
+<arg>${the_login_button_submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-25T10:05:02.213870" elapsed="1.439017"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-25T10:05:03.653918" level="INFO">Clicking element '//div[@class= 'css-1wyvf5z eyoh4ac0']'.</msg>
+<msg time="2024-02-25T10:05:03.907641" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-02-25T10:05:03.911502" level="FAIL">Element with locator '//div[@class= 'css-1wyvf5z eyoh4ac0']' not found.</msg>
+<arg>${Profile}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-02-25T10:05:03.653234" elapsed="0.262012">Element with locator '//div[@class= 'css-1wyvf5z eyoh4ac0']' not found.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${legal_company}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-25T10:05:03.915833" elapsed="0.000038"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-02-25T10:05:03.915949" elapsed="0.000013"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${add_counterparty}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-25T10:05:03.916006" elapsed="0.000010"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-02-25T10:05:03.916051" elapsed="0.000009"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${legal_company_form}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-25T10:05:03.916096" elapsed="0.000009"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-02-25T10:05:03.916138" elapsed="0.000010"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${company_form_ip}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-25T10:05:03.916183" elapsed="0.000008"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-02-25T10:05:03.916223" elapsed="0.000007"/>
+</kw>
+<kw name="Get Random Inn Fl" owner="inn_generator">
+<var>${random_inn}</var>
+<doc>Get random Individual Entrepreneur INN</doc>
+<status status="NOT RUN" start="2024-02-25T10:05:03.916277" elapsed="0.000008"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_field_inn}</arg>
 <arg>${random_inn}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:35.426840" elapsed="0.080184"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.916327" elapsed="0.000008"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-02-24T18:25:37.508272" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-02-24T18:25:35.507344" elapsed="2.001148"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.916370" elapsed="0.000008"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:37.509684" level="INFO">Clicking element '//span[contains(text(),'Продолжить')]'.</msg>
 <arg>${form_continue}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:37.508995" elapsed="0.081366"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.916431" elapsed="0.000009"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-02-24T18:25:42.591820" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-02-24T18:25:37.590505" elapsed="5.001926"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.916473" elapsed="0.000008"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:42.594196" level="INFO">Typing text 'ООО Тестилище' into text field '//input[@name='Contractor_legalCompanyName']'.</msg>
 <arg>${legal_name_company}</arg>
 <arg>${legal_name_company_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:42.593244" elapsed="0.079990"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.916513" elapsed="0.000008"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:42.673562" level="INFO">Typing text '1176733010960' into text field '//input[@name='Contractor_ogrn']'.</msg>
 <arg>${legal_OGRN}</arg>
 <arg>${legal_OGRN_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:42.673379" elapsed="0.052441"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.916555" elapsed="0.000007"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:42.726212" level="INFO">Typing text '101001' into text field '//input[@name='Contractor_index']'.</msg>
 <arg>${legal_index}</arg>
 <arg>${legal_index_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:42.726054" elapsed="0.050444"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.916715" elapsed="0.000081"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:42.777782" level="INFO">Typing text 'Москва' into text field '//input[@name='Contractor_city']'.</msg>
 <arg>${legal_city}</arg>
 <arg>${legal_city_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:42.777554" elapsed="0.058663"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.916964" elapsed="0.000059"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:42.836558" level="INFO">Typing text 'Ленина' into text field '//input[@name='Contractor_street']'.</msg>
 <arg>${legal_street}</arg>
 <arg>${legal_street_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:42.836397" elapsed="0.055514"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.917125" elapsed="0.000020"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:42.892206" level="INFO">Typing text '1' into text field '//input[@name='Contractor_house']'.</msg>
 <arg>${legal_house}</arg>
 <arg>${legal_house_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:42.892049" elapsed="0.058396"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.917193" elapsed="0.000011"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:42.950847" level="INFO">Typing text '1' into text field '//input[@name='Contractor_housing']'.</msg>
 <arg>${legal_housing}</arg>
 <arg>${legal_housing_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:42.950588" elapsed="0.046323"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.917248" elapsed="0.000009"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:42.997159" level="INFO">Typing text '1/2' into text field '//input[@name='Contractor_apartment']'.</msg>
 <arg>${legal_apartment}</arg>
 <arg>${legal_apartment_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:42.997027" elapsed="0.054365"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.917292" elapsed="0.000008"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:43.051670" level="INFO">Typing text 'Доп инфо' into text field '//input[@name='Contractor_additionalInfo']'.</msg>
 <arg>${legal_additional}</arg>
 <arg>${legal_additional_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:43.051509" elapsed="0.114862"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.917334" elapsed="0.000009"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:43.166664" level="INFO">Typing text '182177756' into text field '//input[@name='Contractor_bik']'.</msg>
 <arg>${legal_bik}</arg>
 <arg>${legal_bik_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:43.166511" elapsed="0.069560"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.917379" elapsed="0.000008"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-02-24T18:25:46.237627" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-02-24T18:25:43.236186" elapsed="3.001691"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.917421" elapsed="0.000008"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:46.239115" level="INFO">Typing text 'ВТБ (ПАО) в г. Москве' into text field '//input[@name='Contractor_bankName']'.</msg>
 <arg>${legal_bankName}</arg>
 <arg>${legal_bankName_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:46.238405" elapsed="0.087667"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.917472" elapsed="0.000009"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-02-24T18:25:49.328570" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-02-24T18:25:46.326197" elapsed="3.002681"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.917771" elapsed="0.000010"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:49.329734" level="INFO">Typing text 'Москва' into text field '//input[@name='Contractor_bankCity']'.</msg>
 <arg>${legal_bankCity}</arg>
 <arg>${legal_bankCity_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:49.329255" elapsed="0.155015"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.917815" elapsed="0.000009"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-02-24T18:25:52.485710" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-02-24T18:25:49.484464" elapsed="3.001789"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.917856" elapsed="0.000009"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:52.487708" level="INFO">Typing text '40702810902820001311' into text field '//input[@name='Contractor_bankAccount']'.</msg>
 <arg>${legal_bankAccount}</arg>
 <arg>${legal_bankAccount_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:52.487034" elapsed="0.084250"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.917897" elapsed="0.000008"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:52.571589" level="INFO">Typing text '40702810902820001310' into text field '//input[@placeholder='301']'.</msg>
 <arg>${leagal_cor}</arg>
 <arg>${leagal_cor_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:52.571436" elapsed="0.061361"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.917939" elapsed="0.000007"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-02-24T18:25:55.634769" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-02-24T18:25:52.632952" elapsed="3.002124"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.917978" elapsed="0.000008"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:55.635829" level="INFO">Typing text 'Тестов' into text field '//input[@name='Contractor_contactPerson']'.</msg>
 <arg>${legal_contactPerson}</arg>
 <arg>${legal_contactPerson_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:55.635392" elapsed="0.076784"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.918018" elapsed="0.000015"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:55.712488" level="INFO">Typing text '+7 (141) 441-14-14' into text field '//input[@placeholder='+7 ХХХ ХХХ-ХХ-ХХ']'.</msg>
 <arg>${legal_placeholder}</arg>
 <arg>${legal_placeholder_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:55.712319" elapsed="0.053607"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.918067" elapsed="0.000008"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:55.766193" level="INFO">Typing text 'milyukov.p@citilink.ru' into text field '//input[@name='Contractor_corpEmail']'.</msg>
 <arg>${legal_corpEmail}</arg>
 <arg>${legal_corpEmail_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:55.766052" elapsed="0.063642"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.918108" elapsed="0.000102"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:55.830149" level="INFO">Typing text 'Директор' into text field '//input[@name='Contractor_userPosition']'.</msg>
 <arg>${legal_userPosition}</arg>
 <arg>${legal_userPosition_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:55.829845" elapsed="0.050861"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.918405" elapsed="0.000028"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:55.880980" level="INFO">Typing text 'Тестов Т.Т' into text field '//input[@name='Contractor_directorFullName']'.</msg>
 <arg>${legal_directorFullName}</arg>
 <arg>${legal_directorFullName_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:55.880822" elapsed="0.052122"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.918479" elapsed="0.000009"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:55.933241" level="INFO">Typing text 'milyukov.p@citilink.ru' into text field '//input[@name='Contractor_directorEmail']'.</msg>
 <arg>${legal_directorEmail}</arg>
 <arg>${legal_directorEmail_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:55.933071" elapsed="0.068440"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.918593" elapsed="0.000011"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:56.002192" level="INFO">Typing text 'Тестова Н.И' into text field '//input[@name='Contractor_chiefAccountantFullName']'.</msg>
 <arg>${legal_chiefAccountant}</arg>
 <arg>${legal_chiefAccountant_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:56.001992" elapsed="0.057688"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.918692" elapsed="0.000009"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:56.060302" level="INFO">Typing text 'milyukov.p@citilink.ru' into text field '//input[@name='Contractor_chiefAccountantEmail']'.</msg>
 <arg>${legal_AccountantEmail}</arg>
 <arg>${legal_AccountantEmail_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:56.059845" elapsed="0.071230"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.919528" elapsed="0.000020"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-02-24T18:25:58.131712" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-02-24T18:25:56.131275" elapsed="2.000718"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.919632" elapsed="0.000010"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:25:58.133100" level="INFO">Clicking element 'xpath=//span[contains(text(),'Продолжить')]'.</msg>
 <arg>${add_counterparty_continue}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:25:58.132658" elapsed="0.114900"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.919680" elapsed="0.000009"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-02-24T18:26:02.249707" level="INFO">Slept 4 seconds.</msg>
 <arg>4s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-02-24T18:25:58.247746" elapsed="4.002169"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.919721" elapsed="0.000008"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-24T18:26:02.252439" level="INFO">Clicking element 'xpath=//span[.='Продолжить без реквизитов']'.</msg>
 <arg>${сontinue_without_details}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-24T18:26:02.250239" elapsed="0.066673"/>
+<status status="NOT RUN" start="2024-02-25T10:05:03.919767" elapsed="0.000008"/>
 </kw>
-<status status="PASS" start="2024-02-24T18:25:13.151339" elapsed="49.165878"/>
+<status status="FAIL" start="2024-02-25T10:04:53.907354" elapsed="10.012962">Element with locator '//div[@class= 'css-1wyvf5z eyoh4ac0']' not found.</status>
 </test>
-<status status="PASS" start="2024-02-24T18:25:13.024733" elapsed="49.293209"/>
+<status status="FAIL" start="2024-02-25T10:04:32.144604" elapsed="31.776465"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Ts">Ts</stat>
+<stat pass="1" fail="2" skip="0" id="s1" name="Ts">Ts</stat>
 </suite>
 </statistics>
 <errors>
