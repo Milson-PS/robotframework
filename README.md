@@ -50,11 +50,11 @@ robot Имя_файла.robot
 
 #### Главная страница
 
-<img src="img/screen/AllureMain.jpg" alt="Allure"/>
+<img src="img/screen/1.png" alt="Allure"/>
 
 #### Графики
 
-<img src="img/screen/AllureGraph.jpg" alt="Allure"/>
+<img src="img/screen/2.png" alt="Allure"/>
 
 #### Тесты
 
