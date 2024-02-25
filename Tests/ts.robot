@@ -162,7 +162,7 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
     click element       ${switch_profile}
     sleep    1s
     click element       ${change_user}
-    sleep    2s
+    close browser
 ##Проверка навигации
 #
 #   click element       ${catalogButton}

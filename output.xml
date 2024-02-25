@@ -1,423 +1,504 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.3 on darwin)" generated="2024-02-25T10:04:32.144060" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.3 on darwin)" generated="2024-02-25T10:30:01.119885" rpa="false" schemaversion="5">
 <suite id="s1" name="Ts" source="/Users/pavelmilyukov/PycharmProjects/robotframework/Tests/ts.robot">
 <test id="s1-t1" name="Вход в лк" line="143">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:04:32.232770" level="INFO">Opening browser 'Chrome' to base url 'https://www.citilink.ru'.</msg>
+<msg time="2024-02-25T10:30:01.200379" level="INFO">Opening browser 'Chrome' to base url 'https://www.citilink.ru'.</msg>
 <arg>${main_page}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-25T10:04:32.232648" elapsed="4.917519"/>
+<status status="PASS" start="2024-02-25T10:30:01.200264" elapsed="4.986972"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-25T10:04:37.151076" elapsed="0.476253"/>
+<status status="PASS" start="2024-02-25T10:30:06.188543" elapsed="0.469810"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:04:37.628166" level="INFO">Clicking element '//div[@data-meta-name= 'UserButtonContainer' and @class= 'css-1vb2hqj e38q5fc0']'.</msg>
+<msg time="2024-02-25T10:30:06.660726" level="INFO">Clicking element '//div[@data-meta-name= 'UserButtonContainer' and @class= 'css-1vb2hqj e38q5fc0']'.</msg>
 <arg>${catalogButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-25T10:04:37.627522" elapsed="0.102359"/>
+<status status="PASS" start="2024-02-25T10:30:06.658545" elapsed="0.091743"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:04:37.730593" level="INFO">Typing text '79118952395' into text field 'login'.</msg>
+<msg time="2024-02-25T10:30:06.751048" level="INFO">Typing text '79118952395' into text field 'login'.</msg>
 <arg>${login_input_field}</arg>
 <arg>${login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-25T10:04:37.730204" elapsed="0.171614"/>
+<status status="PASS" start="2024-02-25T10:30:06.750621" elapsed="0.164380"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:04:37.902204" level="INFO">Typing password into text field 'pass'.</msg>
-<msg time="2024-02-25T10:04:37.935601" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-02-25T10:30:06.915337" level="INFO">Typing password into text field 'pass'.</msg>
+<msg time="2024-02-25T10:30:06.965099" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${login_pass_field}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-25T10:04:37.902012" elapsed="0.079629"/>
+<status status="PASS" start="2024-02-25T10:30:06.915162" elapsed="0.096429"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${the_login_button_submit}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-02-25T10:04:37.981783" elapsed="2.790350"/>
+<status status="PASS" start="2024-02-25T10:30:07.011758" elapsed="2.773803"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:04:40.773059" level="INFO">Clicking element 'xpath=//button[@class='e4uhfkv0 css-1nvnwij e4mggex0']'.</msg>
+<msg time="2024-02-25T10:30:09.785990" level="INFO">Clicking element 'xpath=//button[@class='e4uhfkv0 css-1nvnwij e4mggex0']'.</msg>
 <arg>${the_login_button_submit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-25T10:04:40.772624" elapsed="3.535572"/>
+<status status="PASS" start="2024-02-25T10:30:09.785769" elapsed="1.117267"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-02-25T10:04:44.316096" elapsed="0.110073"/>
+<status status="PASS" start="2024-02-25T10:30:10.903194" elapsed="0.111629"/>
 </kw>
-<status status="PASS" start="2024-02-25T10:04:32.232234" elapsed="12.194150"/>
+<status status="PASS" start="2024-02-25T10:30:01.199855" elapsed="9.815240"/>
 </test>
 <test id="s1-t2" name="Смена пользователя" line="153">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:04:44.427133" level="INFO">Opening browser 'Chrome' to base url 'https://www.citilink.ru'.</msg>
+<msg time="2024-02-25T10:30:11.017540" level="INFO">Opening browser 'Chrome' to base url 'https://www.citilink.ru'.</msg>
 <arg>${main_page}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-25T10:04:44.426922" elapsed="4.546965"/>
+<status status="PASS" start="2024-02-25T10:30:11.017144" elapsed="19.453738"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-25T10:04:48.974326" elapsed="0.472545"/>
+<status status="PASS" start="2024-02-25T10:30:30.471804" elapsed="0.473025"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:04:49.449400" level="INFO">Clicking element '//div[@data-meta-name= 'UserButtonContainer' and @class= 'css-1vb2hqj e38q5fc0']'.</msg>
+<msg time="2024-02-25T10:30:30.945370" level="INFO">Clicking element '//div[@data-meta-name= 'UserButtonContainer' and @class= 'css-1vb2hqj e38q5fc0']'.</msg>
 <arg>${catalogButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-25T10:04:49.448158" elapsed="0.082305"/>
+<status status="PASS" start="2024-02-25T10:30:30.945003" elapsed="0.085511"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:04:49.530886" level="INFO">Typing text '79118952395' into text field 'login'.</msg>
+<msg time="2024-02-25T10:30:31.030957" level="INFO">Typing text '79118952395' into text field 'login'.</msg>
 <arg>${login_input_field}</arg>
 <arg>${login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-25T10:04:49.530598" elapsed="0.164785"/>
+<status status="PASS" start="2024-02-25T10:30:31.030780" elapsed="0.208570"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:04:49.695668" level="INFO">Typing password into text field 'pass'.</msg>
-<msg time="2024-02-25T10:04:49.736510" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-02-25T10:30:31.240374" level="INFO">Typing password into text field 'pass'.</msg>
+<msg time="2024-02-25T10:30:31.277931" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${login_pass_field}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-25T10:04:49.695519" elapsed="0.088797"/>
+<status status="PASS" start="2024-02-25T10:30:31.240012" elapsed="0.082144"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${the_login_button_submit}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-02-25T10:04:49.784453" elapsed="2.780263"/>
+<status status="PASS" start="2024-02-25T10:30:31.322293" elapsed="2.774510"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:04:52.565083" level="INFO">Clicking element 'xpath=//button[@class='e4uhfkv0 css-1nvnwij e4mggex0']'.</msg>
+<msg time="2024-02-25T10:30:34.097318" level="INFO">Clicking element 'xpath=//button[@class='e4uhfkv0 css-1nvnwij e4mggex0']'.</msg>
 <arg>${the_login_button_submit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-25T10:04:52.564893" elapsed="1.170819"/>
+<status status="PASS" start="2024-02-25T10:30:34.097040" elapsed="2.287791"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:04:53.736367" level="INFO">Clicking element '//div[@class= 'css-1wyvf5z eyoh4ac0']'.</msg>
-<msg time="2024-02-25T10:04:53.902323" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-02-25T10:04:53.902544" level="FAIL">Element with locator '//div[@class= 'css-1wyvf5z eyoh4ac0']' not found.</msg>
+<msg time="2024-02-25T10:30:36.385138" level="INFO">Clicking element '//div[@class= 'css-1wyvf5z eyoh4ac0']'.</msg>
+<msg time="2024-02-25T10:30:36.539005" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-02-25T10:30:36.539202" level="FAIL">Element with locator '//div[@class= 'css-1wyvf5z eyoh4ac0']' not found.</msg>
 <arg>${Profile}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-02-25T10:04:53.736075" elapsed="0.170678">Element with locator '//div[@class= 'css-1wyvf5z eyoh4ac0']' not found.</status>
+<status status="FAIL" start="2024-02-25T10:30:36.384975" elapsed="0.158733">Element with locator '//div[@class= 'css-1wyvf5z eyoh4ac0']' not found.</status>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${switch_profile}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:04:53.906881" elapsed="0.000018"/>
+<status status="NOT RUN" start="2024-02-25T10:30:36.543824" elapsed="0.000021"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-02-25T10:04:53.906955" elapsed="0.000010"/>
+<status status="NOT RUN" start="2024-02-25T10:30:36.543903" elapsed="0.000010"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${change_user}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:04:53.907005" elapsed="0.000010"/>
+<status status="NOT RUN" start="2024-02-25T10:30:36.543951" elapsed="0.000009"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-02-25T10:04:53.907050" elapsed="0.000009"/>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-02-25T10:30:36.543998" elapsed="0.000008"/>
 </kw>
-<status status="FAIL" start="2024-02-25T10:04:44.426624" elapsed="9.480564">Element with locator '//div[@class= 'css-1wyvf5z eyoh4ac0']' not found.</status>
+<status status="FAIL" start="2024-02-25T10:30:11.016064" elapsed="25.528044">Element with locator '//div[@class= 'css-1wyvf5z eyoh4ac0']' not found.</status>
 </test>
 <test id="s1-t3" name="Добавить контрагента ИП" line="209">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:04:53.907691" level="INFO">Opening browser 'Chrome' to base url 'https://www.citilink.ru'.</msg>
+<msg time="2024-02-25T10:30:36.544548" level="INFO">Opening browser 'Chrome' to base url 'https://www.citilink.ru'.</msg>
 <arg>${main_page}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-25T10:04:53.907572" elapsed="4.668320"/>
+<status status="PASS" start="2024-02-25T10:30:36.544439" elapsed="2.651564"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2024-02-25T10:30:39.200096" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.69)
+Stacktrace:
+0   chromedriver                        0x00000001030b8580 chromedriver + 3966336
+1   chromedriver                        0x00000001030b0b0c chromedriver + 3934988
+2   chromedriver                        0x0000000102d33da0 chromedriver + 277920
+3   chromedriver                        0x0000000102d0efb0 chromedriver + 126896
+4   chromedriver                        0x0000000102d9b414 chromedriver + 701460
+5   chromedriver                        0x0000000102dae304 chromedriver + 779012
+6   chromedriver                        0x0000000102d6afb0 chromedriver + 503728
+7   chromedriver                        0x0000000102d6ba28 chromedriver + 506408
+8   chromedriver                        0x000000010307d768 chromedriver + 3725160
+9   chromedriver                        0x0000000103081c5c chromedriver + 3742812
+10  chromedriver                        0x0000000103066250 chromedriver + 3629648
+11  chromedriver                        0x0000000103082758 chromedriver + 3745624
+12  chromedriver                        0x00000001030595c8 chromedriver + 3577288
+13  chromedriver                        0x00000001030a0fb8 chromedriver + 3870648
+14  chromedriver                        0x00000001030a115c chromedriver + 3871068
+15  chromedriver                        0x00000001030b077c chromedriver + 3934076
+16  libsystem_pthread.dylib             0x0000000182e42034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000182e3ce3c thread_start + 8
+</msg>
+<msg time="2024-02-25T10:30:39.201031" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.69)
+Stacktrace:
+0   chromedriver                        0x00000001030b8580 chromedriver + 3966336
+1   chromedriver                        0x00000001030b0b0c chromedriver + 3934988
+2   chromedriver                        0x0000000102d33da0 chromedriver + 277920
+3   chromedriver                        0x0000000102d0efb0 chromedriver + 126896
+4   chromedriver                        0x0000000102d9b414 chromedriver + 701460
+5   chromedriver                        0x0000000102dae304 chromedriver + 779012
+6   chromedriver                        0x0000000102d6afb0 chromedriver + 503728
+7   chromedriver                        0x0000000102d6ba28 chromedriver + 506408
+8   chromedriver                        0x000000010307d768 chromedriver + 3725160
+9   chromedriver                        0x0000000103081c5c chromedriver + 3742812
+10  chromedriver                        0x0000000103066250 chromedriver + 3629648
+11  chromedriver                        0x0000000103082758 chromedriver + 3745624
+12  chromedriver                        0x00000001030595c8 chromedriver + 3577288
+13  chromedriver                        0x00000001030a0fb8 chromedriver + 3870648
+14  chromedriver                        0x00000001030a115c chromedriver + 3871068
+15  chromedriver                        0x00000001030b077c chromedriver + 3934076
+16  libsystem_pthread.dylib             0x0000000182e42034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000182e3ce3c thread_start + 8
+</msg>
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-25T10:04:58.576768" elapsed="0.491464"/>
+<status status="FAIL" start="2024-02-25T10:30:39.197076" elapsed="0.007225">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.69)
+Stacktrace:
+0   chromedriver                        0x00000001030b8580 chromedriver + 3966336
+1   chromedriver                        0x00000001030b0b0c chromedriver + 3934988
+2   chromedriver                        0x0000000102d33da0 chromedriver + 277920
+3   chromedriver                        0x0000000102d0efb0 chromedriver + 126896
+4   chromedriver                        0x0000000102d9b414 chromedriver + 701460
+5   chromedriver                        0x0000000102dae304 chromedriver + 779012
+6   chromedriver                        0x0000000102d6afb0 chromedriver + 503728
+7   chromedriver                        0x0000000102d6ba28 chromedriver + 506408
+8   chromedriver                        0x000000010307d768 chromedriver + 3725160
+9   chromedriver                        0x0000000103081c5c chromedriver + 3742812
+10  chromedriver                        0x0000000103066250 chromedriver + 3629648
+11  chromedriver                        0x0000000103082758 chromedriver + 3745624
+12  chromedriver                        0x00000001030595c8 chromedriver + 3577288
+13  chromedriver                        0x00000001030a0fb8 chromedriver + 3870648
+14  chromedriver                        0x00000001030a115c chromedriver + 3871068
+15  chromedriver                        0x00000001030b077c chromedriver + 3934076
+16  libsystem_pthread.dylib             0x0000000182e42034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000182e3ce3c thread_start + 8
+</status>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:04:59.069691" level="INFO">Clicking element '//div[@data-meta-name= 'UserButtonContainer' and @class= 'css-1vb2hqj e38q5fc0']'.</msg>
 <arg>${catalogButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-25T10:04:59.068843" elapsed="0.119409"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.204521" elapsed="0.000043"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:04:59.189303" level="INFO">Typing text '79118952395' into text field 'login'.</msg>
 <arg>${login_input_field}</arg>
 <arg>${login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-25T10:04:59.188674" elapsed="0.165806"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.204664" elapsed="0.000020"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:04:59.354800" level="INFO">Typing password into text field 'pass'.</msg>
-<msg time="2024-02-25T10:04:59.392390" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${login_pass_field}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-25T10:04:59.354633" elapsed="0.083008"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.204786" elapsed="0.000015"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${the_login_button_submit}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-02-25T10:04:59.437791" elapsed="2.775762"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.204935" elapsed="0.000017"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:05:02.214120" level="INFO">Clicking element 'xpath=//button[@class='e4uhfkv0 css-1nvnwij e4mggex0']'.</msg>
 <arg>${the_login_button_submit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-25T10:05:02.213870" elapsed="1.439017"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.205178" elapsed="0.000035"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-25T10:05:03.653918" level="INFO">Clicking element '//div[@class= 'css-1wyvf5z eyoh4ac0']'.</msg>
-<msg time="2024-02-25T10:05:03.907641" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-02-25T10:05:03.911502" level="FAIL">Element with locator '//div[@class= 'css-1wyvf5z eyoh4ac0']' not found.</msg>
 <arg>${Profile}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-02-25T10:05:03.653234" elapsed="0.262012">Element with locator '//div[@class= 'css-1wyvf5z eyoh4ac0']' not found.</status>
+<status status="NOT RUN" start="2024-02-25T10:30:39.205308" elapsed="0.000018"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${legal_company}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.915833" elapsed="0.000038"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.205397" elapsed="0.000015"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.915949" elapsed="0.000013"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.205485" elapsed="0.000017"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${add_counterparty}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.916006" elapsed="0.000010"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.205571" elapsed="0.000016"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.916051" elapsed="0.000009"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.205643" elapsed="0.000014"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${legal_company_form}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.916096" elapsed="0.000009"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.205714" elapsed="0.000014"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.916138" elapsed="0.000010"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.206243" elapsed="0.000029"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${company_form_ip}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.916183" elapsed="0.000008"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.206355" elapsed="0.000018"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.916223" elapsed="0.000007"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.206445" elapsed="0.000016"/>
 </kw>
 <kw name="Get Random Inn Fl" owner="inn_generator">
 <var>${random_inn}</var>
 <doc>Get random Individual Entrepreneur INN</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.916277" elapsed="0.000008"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.206583" elapsed="0.000018"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_field_inn}</arg>
 <arg>${random_inn}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.916327" elapsed="0.000008"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.206664" elapsed="0.000014"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.916370" elapsed="0.000008"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.206737" elapsed="0.000014"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${form_continue}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.916431" elapsed="0.000009"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.206828" elapsed="0.000019"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.916473" elapsed="0.000008"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.206908" elapsed="0.000015"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_name_company}</arg>
 <arg>${legal_name_company_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.916513" elapsed="0.000008"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.206985" elapsed="0.000014"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_OGRN}</arg>
 <arg>${legal_OGRN_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.916555" elapsed="0.000007"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.207058" elapsed="0.000013"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_index}</arg>
 <arg>${legal_index_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.916715" elapsed="0.000081"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.207128" elapsed="0.000014"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_city}</arg>
 <arg>${legal_city_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.916964" elapsed="0.000059"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.207202" elapsed="0.000013"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_street}</arg>
 <arg>${legal_street_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.917125" elapsed="0.000020"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.207274" elapsed="0.000013"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_house}</arg>
 <arg>${legal_house_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.917193" elapsed="0.000011"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.207344" elapsed="0.000012"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_housing}</arg>
 <arg>${legal_housing_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.917248" elapsed="0.000009"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.207414" elapsed="0.000012"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_apartment}</arg>
 <arg>${legal_apartment_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.917292" elapsed="0.000008"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.207482" elapsed="0.000012"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_additional}</arg>
 <arg>${legal_additional_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.917334" elapsed="0.000009"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.207551" elapsed="0.000013"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_bik}</arg>
 <arg>${legal_bik_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.917379" elapsed="0.000008"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.207621" elapsed="0.000013"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.917421" elapsed="0.000008"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.207690" elapsed="0.000014"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_bankName}</arg>
 <arg>${legal_bankName_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.917472" elapsed="0.000009"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.207762" elapsed="0.000013"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.917771" elapsed="0.000010"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.207831" elapsed="0.000013"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_bankCity}</arg>
 <arg>${legal_bankCity_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.917815" elapsed="0.000009"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.207901" elapsed="0.000013"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.917856" elapsed="0.000009"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.207969" elapsed="0.000013"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_bankAccount}</arg>
 <arg>${legal_bankAccount_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.917897" elapsed="0.000008"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.208038" elapsed="0.000013"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${leagal_cor}</arg>
 <arg>${leagal_cor_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.917939" elapsed="0.000007"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.208108" elapsed="0.000013"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.917978" elapsed="0.000008"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.208176" elapsed="0.000013"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_contactPerson}</arg>
 <arg>${legal_contactPerson_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.918018" elapsed="0.000015"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.208243" elapsed="0.000014"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_placeholder}</arg>
 <arg>${legal_placeholder_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.918067" elapsed="0.000008"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.208314" elapsed="0.000012"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_corpEmail}</arg>
 <arg>${legal_corpEmail_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.918108" elapsed="0.000102"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.208382" elapsed="0.000013"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_userPosition}</arg>
 <arg>${legal_userPosition_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.918405" elapsed="0.000028"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.208450" elapsed="0.000012"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_directorFullName}</arg>
 <arg>${legal_directorFullName_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.918479" elapsed="0.000009"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.208518" elapsed="0.000016"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_directorEmail}</arg>
 <arg>${legal_directorEmail_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.918593" elapsed="0.000011"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.208591" elapsed="0.000015"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_chiefAccountant}</arg>
 <arg>${legal_chiefAccountant_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.918692" elapsed="0.000009"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.208662" elapsed="0.000012"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${legal_AccountantEmail}</arg>
 <arg>${legal_AccountantEmail_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.919528" elapsed="0.000020"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.208728" elapsed="0.000013"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.919632" elapsed="0.000010"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.208797" elapsed="0.000013"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${add_counterparty_continue}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.919680" elapsed="0.000009"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.208921" elapsed="0.000014"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>4s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.919721" elapsed="0.000008"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.208994" elapsed="0.000014"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${сontinue_without_details}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-25T10:05:03.919767" elapsed="0.000008"/>
+<status status="NOT RUN" start="2024-02-25T10:30:39.209065" elapsed="0.000014"/>
 </kw>
-<status status="FAIL" start="2024-02-25T10:04:53.907354" elapsed="10.012962">Element with locator '//div[@class= 'css-1wyvf5z eyoh4ac0']' not found.</status>
+<status status="FAIL" start="2024-02-25T10:30:36.544253" elapsed="2.665036">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.69)
+Stacktrace:
+0   chromedriver                        0x00000001030b8580 chromedriver + 3966336
+1   chromedriver                        0x00000001030b0b0c chromedriver + 3934988
+2   chromedriver                        0x0000000102d33da0 chromedriver + 277920
+3   chromedriver                        0x0000000102d0efb0 chromedriver + 126896
+4   chromedriver                        0x0000000102d9b414 chromedriver + 701460
+5   chromedriver                        0x0000000102dae304 chromedriver + 779012
+6   chromedriver                        0x0000000102d6afb0 chromedriver + 503728
+7   chromedriver                        0x0000000102d6ba28 chromedriver + 506408
+8   chromedriver                        0x000000010307d768 chromedriver + 3725160
+9   chromedriver                        0x0000000103081c5c chromedriver + 3742812
+10  chromedriver                        0x0000000103066250 chromedriver + 3629648
+11  chromedriver                        0x0000000103082758 chromedriver + 3745624
+12  chromedriver                        0x00000001030595c8 chromedriver + 3577288
+13  chromedriver                        0x00000001030a0fb8 chromedriver + 3870648
+14  chromedriver                        0x00000001030a115c chromedriver + 3871068
+15  chromedriver                        0x00000001030b077c chromedriver + 3934076
+16  libsystem_pthread.dylib             0x0000000182e42034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000182e3ce3c thread_start + 8
+</status>
 </test>
-<status status="FAIL" start="2024-02-25T10:04:32.144604" elapsed="31.776465"/>
+<status status="FAIL" start="2024-02-25T10:30:01.120402" elapsed="38.089444"/>
 </suite>
 <statistics>
 <total>
@@ -430,5 +511,28 @@
 </suite>
 </statistics>
 <errors>
+<msg time="2024-02-25T10:30:39.200096" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.69)
+Stacktrace:
+0   chromedriver                        0x00000001030b8580 chromedriver + 3966336
+1   chromedriver                        0x00000001030b0b0c chromedriver + 3934988
+2   chromedriver                        0x0000000102d33da0 chromedriver + 277920
+3   chromedriver                        0x0000000102d0efb0 chromedriver + 126896
+4   chromedriver                        0x0000000102d9b414 chromedriver + 701460
+5   chromedriver                        0x0000000102dae304 chromedriver + 779012
+6   chromedriver                        0x0000000102d6afb0 chromedriver + 503728
+7   chromedriver                        0x0000000102d6ba28 chromedriver + 506408
+8   chromedriver                        0x000000010307d768 chromedriver + 3725160
+9   chromedriver                        0x0000000103081c5c chromedriver + 3742812
+10  chromedriver                        0x0000000103066250 chromedriver + 3629648
+11  chromedriver                        0x0000000103082758 chromedriver + 3745624
+12  chromedriver                        0x00000001030595c8 chromedriver + 3577288
+13  chromedriver                        0x00000001030a0fb8 chromedriver + 3870648
+14  chromedriver                        0x00000001030a115c chromedriver + 3871068
+15  chromedriver                        0x00000001030b077c chromedriver + 3934076
+16  libsystem_pthread.dylib             0x0000000182e42034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000182e3ce3c thread_start + 8
+</msg>
 </errors>
 </robot>
