@@ -1,4 +1,4 @@
-# Проект автоматизации тестирования для <a target="_blank" href="https://citilink.ru/">Ситилинк</a> <img src="img/citilink.jpg" width="50" height="50"/>
+# Проект автоматизации тестирования  <a target="_blank" href="https://citilink.ru/">Ситилинк</a> <img src="img/citi.jpeg" width="50" height="50"  alt="citi"/>
 
 ## :open_book: Содержание:
 - [Технологии и инструменты](#gear-в-проекте-используются-следующие-технологии-и-инструменты)
@@ -13,8 +13,9 @@
 ## :gear: В проекте используются следующие технологии и инструменты:
 
 <p align="center">
+<img src="img/git.webp" width="50" height="50"  alt="git"/>
 <img src="img/allure.jpeg" width="50" height="50"  alt="Allure"/>
-<img src="img/python.jpeg" width="50" height="50"  alt="python/>
+<img src="img/python.jpeg" width="50" height="50"  alt="python"/>
 <img src="img/robo.jpeg"   width="50" height="50"  alt="robo"/>
 </p>
 
