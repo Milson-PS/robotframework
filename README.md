@@ -51,12 +51,13 @@ robot Имя_файла.robot
 
 <img src="img/screen /1.png" alt="Allure"/>
 
-#### Графики
-
 <img src="img/screen /2.png" alt="Allure"/> 
 
-<img src="img/screen/ 3.png" alt="Allure"/>
-<img src="img/screen/ 4.png" alt="Allure"/>
+#### Графики
+
+<img src="img/screen /3.png" alt="Allure"/> 
+
+<img src="img/screen /4.png" alt="Allure"/> 
 #### Тесты
 
 <img src="img/screen/AllureTests.jpg" alt="Allure"/>
