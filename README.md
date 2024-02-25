@@ -39,7 +39,7 @@
 
 Для запуска необходимо выполнить команду:
 ```
-robot Имя файла.robot
+robot Имя_файла.robot
 ```
 <img src="img/screen /ts1.gif" alt="gif" />
 
