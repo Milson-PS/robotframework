@@ -5,7 +5,7 @@
 - [Что проверяем](#heavy_check_mark-что-проверяем)
 - [Запуск тестов из терминала](#computer-запуск-тестов-из-терминала)
 - [Отчеты](#bar_chart-отчеты-о-прохождении-тестов-доступны-в-allure)
-- [Видео с прогоном тестов](#movie_camera-видео-с-прогоном-тестов)
+- [Видео](#movie_camera-видео-с-прогоном-тестов)
 - [Allure TestOps](#-проект-интегрирован-с-allure-testOps)
 
 ## :gear: В проекте используются следующие технологии и инструменты:
@@ -59,25 +59,6 @@ robot Имя файла.robot
 
 <img src="img/screen/AllureTests.jpg" alt="Allure"/>
 
-
-## :movie_camera: Видео с прогоном тестов
-
-В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
-
-<p align="center">
-  <img title="Video" src="img/gif/test.gif">
-</p>
-
-## Проект интегрирован с Allure TestOps
-<img width="3%" title="Allure" src="img/logo/Allure_TO.svg"> 
-
-#### Представлены тест-кейсы
-
-<img src="img/screen/TOTest.jpg" alt="TO"/>
-
-#### Представлены дашборды аналитики
-
-<img src="img/screen/TODash.jpg" alt="TO"/>
-
-
+##### Видео прохождение теста
+<img src="img/screen/ts.gif" alt="gif"/>
 
