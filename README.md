@@ -1,4 +1,4 @@
-# Проект автоматизации тестирования для <a target="_blank" href="https://citilink.ru/">Ситилинк</a> <img src="img/citilink.jpg" width="50" height="50"  alt="IDEA"/>
+# Проект автоматизации тестирования для <a target="_blank" href="https://citilink.ru/">Ситилинк</a> <img src="img/citilink.jpg" width="50" height="50"/>
 
 ## :open_book: Содержание:
 - [Технологии и инструменты](#gear-в-проекте-используются-следующие-технологии-и-инструменты)
