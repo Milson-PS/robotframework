@@ -79,7 +79,5 @@ robot Имя файла.robot
 
 <img src="img/screen/TODash.jpg" alt="TO"/>
 
-#### Представлены запуски
 
-<img src="img/screen/TOLaunch.jpg" alt="TO"/>
 
