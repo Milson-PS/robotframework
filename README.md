@@ -15,7 +15,7 @@
 <p align="center">
 <img src="img/git.webp" width="50" height="50"  alt="git"/>
 <img src="img/allure.jpeg" width="50" height="50"  alt="Allure"/>
-<img src="img/Python.svg" width="50" height="50"  alt="python"/>
+<img src="img/py.jpeg" width="50" height="50"  alt="python"/>
 <img src="img/robo.jpeg"   width="50" height="50"  alt="robo"/>
 </p>
 
