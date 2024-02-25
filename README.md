@@ -5,8 +5,6 @@
 - [Что проверяем](#heavy_check_mark-что-проверяем)
 - [Запуск тестов из терминала](#computer-запуск-тестов-из-терминала)
 - [Отчеты](#bar_chart-отчеты-о-прохождении-тестов-доступны-в-allure)
-- - [Allure](#-allure)
-- - [Telegram](#-telegram)
 - [Видео с прогоном тестов](#movie_camera-видео-с-прогоном-тестов)
 - [Allure TestOps](#-проект-интегрирован-с-allure-testOps)
 
@@ -15,7 +13,7 @@
 <p align="center">
 <img src="img/git.webp" width="50" height="50"  alt="git"/>
 <img src="img/allure.jpeg" width="50" height="50"  alt="Allure"/>
-<img src="img/Python.svg" width="50" height="50"  alt="python"/>
+<img src="img/py2.jpeg" width="50" height="50"  alt="python"/>
 <img src="img/robo.jpeg"   width="50" height="50"  alt="robo"/>
 </p>
 
@@ -40,9 +38,9 @@
 
 ## :computer: Запуск тестов из терминала
 
-Для локального запуска необходимо выполнить команду:
+Для запуска необходимо выполнить команду:
 ```
-robot test.robot
+robot Имя файла.robot
 ```
 
 ## :bar_chart: Отчеты о прохождении тестов доступны в Allure
@@ -61,11 +59,6 @@ robot test.robot
 
 <img src="img/screen/AllureTests.jpg" alt="Allure"/>
 
-### <img width="3%" title="Telegram" src="img/logo/Telegram.svg"> Telegram
-
-Настроена отправка отчета ботом в Telegram
-
-<img src="img/screen/Bot.jpg" alt="Telegram"/>
 
 ## :movie_camera: Видео с прогоном тестов
 
@@ -86,7 +79,5 @@ robot test.robot
 
 <img src="img/screen/TODash.jpg" alt="TO"/>
 
-#### Представлены запуски
 
-<img src="img/screen/TOLaunch.jpg" alt="TO"/>
 
