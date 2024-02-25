@@ -65,7 +65,7 @@ robot Имя файла.robot
 В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
 
 <p align="center">
-  <img title="Video" src="img/gif/test.gif">
+  <img title="Video" src="img/screen/ts.gif">
 </p>
 
 ## Проект интегрирован с Allure TestOps
