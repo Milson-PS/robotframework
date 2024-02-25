@@ -62,16 +62,10 @@ robot Имя файла.robot
 ##### Видео прохождение теста
 ![This is an image](img/screen/ts.gif)
 
-## Проект интегрирован с Allure TestOps
-<img width="3%" title="Allure" src="img/logo/Allure_TO.svg"> 
+Name	Last commit message	Last commit date
+parent directory
+..
 
-#### Представлены тест-кейсы
-
-<img src="img/screen/TOTest.jpg" alt="TO"/>
-
-#### Представлены дашборды аналитики
-
-<img src="img/screen/TODash.jpg" alt="TO"/>
-
+ts.gif
 
 
