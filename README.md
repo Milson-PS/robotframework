@@ -42,7 +42,7 @@
 
 Для локального запуска необходимо выполнить команду:
 ```
-robot test.robot
+robot Имя файла.robot
 ```
 
 ## :bar_chart: Отчеты о прохождении тестов доступны в Allure
@@ -61,11 +61,6 @@ robot test.robot
 
 <img src="img/screen/AllureTests.jpg" alt="Allure"/>
 
-### <img width="3%" title="Telegram" src="img/logo/Telegram.svg"> Telegram
-
-Настроена отправка отчета ботом в Telegram
-
-<img src="img/screen/Bot.jpg" alt="Telegram"/>
 
 ## :movie_camera: Видео с прогоном тестов
 
