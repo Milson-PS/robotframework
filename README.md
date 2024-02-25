@@ -60,5 +60,7 @@ robot Имя файла.robot
 <img src="img/screen/AllureTests.jpg" alt="Allure"/>
 
 ##### Видео прохождение теста
-<img src="img/screen/ts.gif" alt="gif"/>
+<img src="img/screen /ts1.gif" alt="gif"/>
+
+
 
