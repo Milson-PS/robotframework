@@ -15,7 +15,7 @@
 <p align="center">
 <img src="img/allure.jpeg" width="50" height="50"  alt="Allure"/>
 <img src="img/python.jpeg" width="50" height="50"  alt="python/>
-<img src="img/robo.jpeg" width="50" height="50"  alt="robo"/>
+<img src="img/robo.jpeg"   width="50" height="50"  alt="robo"/>
 </p>
 
 ## :heavy_check_mark: Описание
