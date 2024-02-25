@@ -50,7 +50,7 @@ robot Имя_файла.robot
 
 #### Главная страница
 
-<img src="img/screen/1.png" alt="Allure"/>
+<img src="img/screen /1.png" alt="Allure"/>
 
 #### Графики
 
