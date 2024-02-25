@@ -5,7 +5,6 @@
 - [Что проверяем](#heavy_check_mark-что-проверяем)
 - [Запуск тестов из терминала](#computer-запуск-тестов-из-терминала)
 - [Отчеты](#bar_chart-отчеты-о-прохождении-тестов-доступны-в-allure)
-- [Видео](#movie_camera-видео-с-прогоном-тестов)
 - [Allure TestOps](#-проект-интегрирован-с-allure-testOps)
 
 ## :gear: В проекте используются следующие технологии и инструменты:
@@ -42,6 +41,7 @@
 ```
 robot Имя файла.robot
 ```
+<img src="img/screen /ts1.gif" alt="gif" width="50" height="50"/>
 
 ## :bar_chart: Отчеты о прохождении тестов доступны в Allure
 
@@ -59,8 +59,7 @@ robot Имя файла.robot
 
 <img src="img/screen/AllureTests.jpg" alt="Allure"/>
 
-##### Видео прохождение теста
-<img src="img/screen /ts1.gif" alt="gif" alt=#movie_camera-видео-с-прогоном-тестов/>
+
 
 
 
