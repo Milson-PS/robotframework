@@ -16,7 +16,6 @@
 <img src="img/allure.jpeg" width="50" height="50"  alt="Allure"/>
 <img src="img/python.jpeg" width="50" height="50"  alt="python/>
 <img src="img/robo.jpeg" width="50" height="50"  alt="robo"/>
-<img src="img/logo/Jira.svg" width="50" height="50"  alt="Jira"/>
 </p>
 
 ## :heavy_check_mark: Описание
