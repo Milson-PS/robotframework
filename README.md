@@ -59,14 +59,8 @@ robot Имя файла.robot
 
 <img src="img/screen/AllureTests.jpg" alt="Allure"/>
 
-
-## :movie_camera: Видео с прогоном тестов
-
-В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
-
-<p align="center">
-  <img title="Video" src="img/screen/ts.gif">
-</p>
+##### Видео прохождение теста
+![This is an image](img/screen/ts.gif)
 
 ## Проект интегрирован с Allure TestOps
 <img width="3%" title="Allure" src="img/logo/Allure_TO.svg"> 
