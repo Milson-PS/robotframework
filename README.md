@@ -13,10 +13,9 @@
 ## :gear: В проекте используются следующие технологии и инструменты:
 
 <p align="center">
-<img src="img/allure.jpeg" width="50" height="50"  alt="Github"/>
-<img src="img/logo/Allure.svg" width="50" height="50"  alt="Allure"/>
-<img src="img/logo/Telegram.svg" width="50" height="50"  alt="Telegram"/>
-<img src="img/logo/Allure.svg" width="50" height="50"  alt="Allure"/>
+<img src="img/allure.jpeg" width="50" height="50"  alt="Allure"/>
+<img src="img/python.jpeg" width="50" height="50"  alt="python/>
+<img src="img/robo.jpeg" width="50" height="50"  alt="robo"/>
 <img src="img/logo/Jira.svg" width="50" height="50"  alt="Jira"/>
 </p>
 
