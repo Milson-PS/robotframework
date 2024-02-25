@@ -41,7 +41,7 @@
 ```
 robot Имя файла.robot
 ```
-<img src="img/screen /ts1.gif" alt="gif" width="50" height="50"/>
+<img src="img/screen /ts1.gif" alt="gif" />
 
 ## :bar_chart: Отчеты о прохождении тестов доступны в Allure
 
