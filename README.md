@@ -5,7 +5,7 @@
 - [Что проверяем](#heavy_check_mark-что-проверяем)
 - [Запуск тестов из терминала](#computer-запуск-тестов-из-терминала)
 - [Отчеты](#bar_chart-отчеты-о-прохождении-тестов-доступны-в-allure)
-- [Allure TestOps](#-проект-интегрирован-с-allure-testOps)
+
 
 ## :gear: В проекте используются следующие технологии и инструменты:
 
@@ -46,6 +46,15 @@ robot Имя_файла.robot
 
 ## :bar_chart: Отчеты о прохождении тестов доступны в Allure
 
+## :computer: Запуск 
+
+Для запуска необходимо выполнить команды:
+```
+ --listener allure_robotframework Tests
+
+ allure serve output/allure
+
+```
 
 #### Главная страница
 
@@ -58,9 +67,7 @@ robot Имя_файла.robot
 <img src="img/screen /3.png" alt="Allure"/> 
 
 <img src="img/screen /4.png" alt="Allure"/> 
-#### Тесты
 
-<img src="img/screen/AllureTests.jpg" alt="Allure"/>
 
 
 ## :heavy_check_mark: Генерация ИНН 
