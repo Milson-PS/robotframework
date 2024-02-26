@@ -8,7 +8,7 @@ Library           AllureRobotframework
 ${browser}    Chrome
 #Страница_входа
 ${main_page}   https://www.citilink.stage.citilink.lt
-Логин пароль stage
+#Логин пароль stage
 ${login}    test30@example.com
 ${password}   Qwe123
 #кнопка "Войти" с главной страницы(ссылка):
@@ -52,7 +52,8 @@ ${delete_receiver_Button_yes}    //div[@class='css-1ej6fkx e1x4yvjg0']//button[1
 ${delete_receiver_Button_canceled}    //div[@class='css-1ej6fkx e1x4yvjg0']//button[2]
 
 #Профиль_юрлицо
-${legal_company}            //a[@data-meta-name='ProfileMenu_Item_Компании']                 #компании
+${legal_company}            //a[@data-meta-name='ProfileMenu_Item_Компании']
+${legal_comp}               //a[contains(text(),'Компании')]                                 #компании
 ${add_counterparty}         //span[contains(text(),'Добавить контрагента')]                  #добавить контрагента
 ${legal_company_form}       //input[@name='Contractor_legalForm']                            #правовая форма
 ${company_form_ip}          //div[contains(text(),'ИП')]                                     #ип
@@ -60,14 +61,15 @@ ${company_com_company}      //div[contains(text(),'Банк')]                  
 ${form_continue}            //span[contains(text(),'Продолжить')]                            #продолжить
 ${legal_invoice_orders}     //a[contains(text(),'Заказы / Счета')]                           #заказы/счета
 ${legal_bonuses}            //a[@data-meta-name='ProfileMenu_Item_Бонусы']                   #бонусы
-${legal_el_licenses}        //a[@data-meta-name='ProfileMenu_Item_Заказы / Счета']           #эл лицензии
+${legal_el_licenses}        //a[contains(text(),'Электронные лицензии и подписки')]          #эл лицензии
 ${legal_delivery}           //a[@data-meta-name='ProfileMenu_Item_Доставка']                 #доставка
 ${legal_staff}              //a[@data-meta-name='ProfileMenu_Item_Сотрудники']               #сотрудники
 ${legal_exit_form}          //span[@class='e1ys5m360 e106ikdt0 css-1ny71b e1gjr6xo0']        #выйти
 #Компания
-${company_form_ip}           //div[contains(text(),'ИП')]
-${legal_field_inn}           //input[@name='Contractor_inn']                                  #инн
-${legal_staff_text}          //div[@class='main_content_inner']                               #поле ввода инн
+${company_form_ip}           //div[contains(text(),'ИП')]                                     #инн
+${legal_kpp}                 //input[@name='Contractor_kpp']                                  #кпп
+${legal_field_inn}           //input[@name='Contractor_inn']                                  #поле ввода инн
+${legal_staff_text}          //h2[contains(text(),'Компании')]                                #текст на форме сотрудников
 ${legal_name_company}        //input[@name='Contractor_legalCompanyName']                     #юридическое наименоваение компании
 ${legal_OGRN}                //input[@name='Contractor_ogrn']                                 #огрн
 #Юридический адрес
@@ -105,10 +107,11 @@ ${number}   71114441111
 ${number2}  71114442222
 ${company_text}                      //h2[@class='e114sczy0 eml1k9j0 react-ssr-app-btob-148euz e1gjr6xo0']
 ${company_text_inn}                  613224381022
-${legal_invoice_order_text}          //th[@class='number_of_order']
+${legal_invoice_order_text}          //h1[contains(text(),'Личный кабинет')]
 ${legal_bonuses_text}                //span[@class='e1ys5m360 e106ikdt0 css-uq8n7d e1gjr6xo0']
-${legal_el_licenses_text}            //strong[@class='Velvica__text Velvica__text_bold'][3]
+${legal_el_licenses_text}            //strong[contains(text(),'Баланс пользователя:')]
 ${legal_delivery_text}               //h2[@class='e114sczy0 eml1k9j0 css-qy8up7 e1gjr6xo0']
+${legal_comp_text}                   //h2[contains(text(),'Компании')]
 ${legal_name_company_text}           ООО Тестилище
 ${legal_OGRN_text}                   1176733010960
 ${legal_index_text}                  101001
@@ -131,7 +134,7 @@ ${legal_directorFullName_text}       Тестов Т.Т
 ${legal_directorEmail_text}          milyukov.p@citilink.ru
 ${legal_chiefAccountant_text}        Тестова Н.И
 ${legal_AccountantEmail_text}        milyukov.p@citilink.ru
-
+${legal_kpp_text}                    322523532
 
 #Вызов генерации ИНН
 ${random_inn}=    Get Random INN FL     #ФИЗ лицо
@@ -150,7 +153,7 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
    click element    ${the_login_button_submit}
    close browser
 
-Смена пользователя
+Смена пользователя + Навигация
     Open browser     ${main_page}   ${browser}
     Maximize Browser Window
     click element       ${catalogButton}
@@ -162,13 +165,14 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
     click element       ${switch_profile}
     sleep    1s
     click element       ${change_user}
-    close browser
-#Проверка навигации
+    sleep    2s
 
-#   click element       ${catalogButton}
-#   click element    ${my_profile}
-#   find element     ${name_profile}
-#   sleep    4s
+#навигация
+    click element       ${Profile}
+    click element       ${legal_comp}
+    sleep    2s
+    get text            ${legal_comp_text}
+    go back
 #invoice_orders
    click element       ${Profile}
    click element       ${legal_invoice_orders}
@@ -202,7 +206,7 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
 #exit
    click element       ${Profile}
    click element    ${legal_exit_form}
-   sleep    2s
+
 
 
 
@@ -285,6 +289,7 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
     sleep    5s
     input text      ${legal_name_company}       ${legal_name_company_text}
     input text      ${legal_OGRN}               ${legal_OGRN_text}
+    input text      ${legal_kpp}                ${legal_kpp_text}
     input text      ${legal_index}              ${legal_index_text}
     input text      ${legal_city}               ${legal_city_text}
     input text      ${legal_street}             ${legal_street_text}
@@ -312,19 +317,10 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
     sleep    2s
     click element   ${add_counterparty_continue}
     sleep    4s
-    click element   ${сontinue_without_details}
+   # click element   ${сontinue_without_details}
 
 
-*** Keywords ***
-
-
-
-
-
-
-
-
-
+#*** Keywords ***
 
 
 
