@@ -46,6 +46,15 @@ robot Имя_файла.robot
 
 ## :bar_chart: Отчеты о прохождении тестов доступны в Allure
 
+## :computer: Запуск 
+
+Для запуска необходимо выполнить команды:
+```
+ --listener allure_robotframework Tests
+
+ allure serve output/allure
+
+```
 
 #### Главная страница
 
