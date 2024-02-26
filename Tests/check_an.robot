@@ -517,14 +517,14 @@ ${editedRecieverCheck}    //span[contains(text(),(541233))]/preceding::span[cont
 
 *** Keywords ***
 startBrowserAndMaximize
-  Open Browser  https://www.citilink.ru/     chrome     #http://citilink.stage.citilink.lt
+  Open Browser  https://www.citilink.stage.citilink.lt     chrome     #http://citilink.stage.citilink.lt
   Maximize Browser Window
 
 loginAndEnterLk
   wait until page contains element    xpath=${catalogButton}
   Click Element    xpath=${catalogButton}
-  input text    login     79994522529               #test30@example.com
-  input text    pass       qwertyu              #Qwe123
+  input text    login     test30@example.com
+  input text    pass      Qwe123
   wait until page contains element    xpath=${enterButton}
   Click Element    xpath=${enterButton}
   wait until page contains element    xpath=${lkButton}

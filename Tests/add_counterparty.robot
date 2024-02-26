@@ -7,13 +7,10 @@ Library           AllureRobotframework
 *** Variables ***
 ${browser}    Chrome
 #Страница_входа
-${main_page}   https://www.citilink.ru
-#Логин пароль stage
-#${login}    test30@example.com
-#${password}   Qwe123
-#Логин пароль бой
-${login}     79118952395
-${password}    qwertyu
+${main_page}   https://www.citilink.stage.citilink.lt
+Логин пароль stage
+${login}    test30@example.com
+${password}   Qwe123
 #кнопка "Войти" с главной страницы(ссылка):
 ${catalogButton}    //div[@data-meta-name= 'UserButtonContainer' and @class= 'css-1vb2hqj e38q5fc0']
 
@@ -164,7 +161,7 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
     click element       ${Profile}
     click element       ${switch_profile}
     sleep    1s
-    #click element       ${change_user}
+    click element       ${change_user}
     close browser
 #Проверка навигации
 
