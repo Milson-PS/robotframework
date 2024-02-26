@@ -7,11 +7,12 @@ Library  SeleniumLibrary
 
 ${catalogButton}    //div[@data-meta-name= 'UserButtonContainer' and @class= 'css-1vb2hqj e38q5fc0']
 ${closePopUp}  //button[@class = 'e1nu7pom0 css-cmjyur e4mggex0' and @data-meta-name= 'Popup__close-button']
-${inputLogin}    /html/body/div[3]/div/div/div/div/div[2]/div/div/div/form/div/div/div[1]/div/div/label/span
+${inputLogin}    //span[contains(text(),'Войти')]/parent::div/parent::div[@class='css-1vb2hqj e38q5fc0']
 ${inputPassword}    //input[@name='pass']/ancestor::span
 ${enterButton}    //button[@class= 'e4uhfkv0 css-1nvnwij e4mggex0' and @data-meta-disabled= 'false']
-${lkButton}    //*[@id="__next"]/div/div[3]/div/div[2]/div/div/div[2]/div[2]/div[1]/div/div
+${lkButton}    //div[@class='css-1cs774w e10bp8150']/div[1]/div
 ${profileMenuButtonMain}    //a[@data-meta-name='ProfileMenu_Item_Мой профиль']
+${profileMenuButtonDelivery}    //a[@data-meta-name='ProfileMenu_Item_Доставка']
 
 #ProfilePage
 
@@ -80,6 +81,8 @@ ${saveEditRecieverButton}    //div[@class='css-0 e1bg2yhp0']/button[1]
 ${cancelEditRecieverButton}    //div[@class='css-0 e1bg2yhp0']/button[2]
 ${yesDeleteRecieverButton}    //div[@class='css-0 e2tmuw30']/button[1]
 ${cancelDeleteRecieverButton}    //div[@class='css-0 e2tmuw30']/button[2]
+${testNumber}    1
+${testSymbol}    а
 
 #Проверки
 ${createdAdressCheck}    //span[contains(text(),'12')]/preceding::span[contains(text(),(5))]/preceding::span[contains(text(),'23') and contains(text(),'Москва') and contains(text(),'Каширское')]/parent::div
@@ -133,9 +136,11 @@ ${editedRecieverCheck}    //span[contains(text(),(541233))]/preceding::span[cont
   Click Element    xpath=${profileMenuButtonAddAdress}
   sleep    2s
   fillAdressPartialNoCity    ${inputAdressCityName}  ${inputAdressCityPick}    ${closeExpr}   ${inputAdressStreetName}  ${inputAdressStreetPick}  ${inputAdressHouseName}  ${inputAdressBuildingName}  ${inputAdressCorpusName}  ${inputAdressEntranceName}   ${inputAdressFloorName}   ${inputAdressapArtmentName}
-  press keys    xpath=${inputAdressCity}    SPACE
+  press keys    xpath=${inputAdressCity}    ${testNumber}
+  press keys    xpath=${inputAdressCity}    BACKSPACE
   sleep    2s
   element should be disabled    xpath=${addButton}
+  sleep    1s
   close browser
 
 Добавление нового адреса(без обязательных полей - улица)
@@ -145,9 +150,11 @@ ${editedRecieverCheck}    //span[contains(text(),(541233))]/preceding::span[cont
   Click Element    xpath=${profileMenuButtonAddAdress}
   sleep    2s
   fillAdressPartialNoStreet    ${inputAdressCityName}  ${inputAdressCityPick}    ${closeExpr}   ${inputAdressStreetName}  ${inputAdressStreetPick}  ${inputAdressHouseName}  ${inputAdressBuildingName}  ${inputAdressCorpusName}  ${inputAdressEntranceName}   ${inputAdressFloorName}   ${inputAdressapArtmentName}
-  press keys    xpath=${inputAdressStreet}    SPACE
+  press keys    xpath=${inputAdressStreet}     ${testSymbol}
+  press keys    xpath=${inputAdressStreet}    BACKSPACE
   sleep    2s
   element should be disabled    xpath=${addButton}
+  sleep    1s
   close browser
 
 Добавление нового адреса(без обязательных полей - дом)
@@ -157,7 +164,8 @@ ${editedRecieverCheck}    //span[contains(text(),(541233))]/preceding::span[cont
   Click Element    xpath=${profileMenuButtonAddAdress}
   sleep    2s
   fillAdressPartialNoHouse    ${inputAdressCityName}  ${inputAdressCityPick}    ${closeExpr}   ${inputAdressStreetName}  ${inputAdressStreetPick}  ${inputAdressHouseName}  ${inputAdressBuildingName}  ${inputAdressCorpusName}  ${inputAdressEntranceName}   ${inputAdressFloorName}   ${inputAdressapArtmentName}
-  press keys    xpath=${inputAdressHouse}    SPACE
+  press keys    xpath=${inputAdressHouse}     ${testNumber}
+  press keys    xpath=${inputAdressHouse}    BACKSPACE
   sleep    2s
   element should be disabled    xpath=${addButton}
   close browser
@@ -301,9 +309,12 @@ ${editedRecieverCheck}    //span[contains(text(),(541233))]/preceding::span[cont
   sleep    2s
   fillRecieverPartialNoName    ${RecieverName}    ${RecieverSurname}    ${RecieverPhone}
   sleep    2s
-  press keys    xpath=${addRecieverName}    SPACE
+  press keys    xpath=${addRecieverName}     ${testSymbol}
+  sleep    2s
+  press keys    xpath=${addRecieverName}    BACKSPACE
   sleep    2s
   element should be disabled    xpath=${addReciever}
+  sleep    1s
   close browser
 
 Добавление нового получателя(без обязательных полей - фамилия)
@@ -315,9 +326,12 @@ ${editedRecieverCheck}    //span[contains(text(),(541233))]/preceding::span[cont
   sleep    2s
   fillRecieverPartialNoSurname    ${RecieverName}    ${RecieverSurname}    ${RecieverPhone}
   sleep    2s
-  press keys    xpath=${addRecieverSurname}    SPACE
+  press keys    xpath=${addRecieverSurname}      ${testSymbol}
+  sleep    2s
+  press keys    xpath=${addRecieverSurname}    BACKSPACE
   sleep    2s
   element should be disabled    xpath=${addReciever}
+  sleep    1s
   close browser
 
 Добавление нового получателя(без обязательных полей - телефон)
@@ -329,9 +343,12 @@ ${editedRecieverCheck}    //span[contains(text(),(541233))]/preceding::span[cont
   sleep    2s
   fillRecieverPartialNoPhone    ${RecieverName}    ${RecieverSurname}    ${RecieverPhone}
   sleep    2s
-  press keys    xpath=${addRecieverPhone}    SPACE
+  press keys    xpath=${addRecieverPhone}     ${testNumber}
+  sleep    2s
+  press keys    xpath=${addRecieverPhone}    BACKSPACE
   sleep    2s
   element should be disabled    xpath=${addReciever}
+  sleep    1s
   close browser
 
 Редактирование получателя(все поля)
@@ -413,6 +430,7 @@ ${editedRecieverCheck}    //span[contains(text(),(541233))]/preceding::span[cont
   close browser
 
 Удаление получателя
+
 
   startBrowserAndMaximize
   loginAndEnterLk
@@ -500,6 +518,7 @@ ${editedRecieverCheck}    //span[contains(text(),(541233))]/preceding::span[cont
   sleep    2s
   reload page
   sleep    2s
+
   #
   #     Удаление нового получателя
   #
@@ -515,24 +534,23 @@ ${editedRecieverCheck}    //span[contains(text(),(541233))]/preceding::span[cont
   sleep    2s
   reload page
 
+
+
 *** Keywords ***
 startBrowserAndMaximize
-  Open Browser  https://www.citilink.stage.citilink.lt     chrome     #http://citilink.stage.citilink.lt
+  Open Browser   http://citilink.stage.citilink.lt    chrome
   Maximize Browser Window
 
 loginAndEnterLk
-  wait until page contains element    xpath=${catalogButton}
   Click Element    xpath=${catalogButton}
-  input text    login     test30@example.com
-  input text    pass      Qwe123
+  input text    login    test30@example.com
+  input text    pass  Qwe123
   wait until page contains element    xpath=${enterButton}
   Click Element    xpath=${enterButton}
   wait until page contains element    xpath=${lkButton}
   Click Element    xpath=${lkButton}
-  wait until page contains element    xpath=${profileMenuButtonMain}
-  Click Element    xpath=${profileMenuButtonMain}
-  wait until page contains element    xpath=${profileMenuButtonProfile}
-  Click Element    xpath=${profileMenuButtonProfile}
+  wait until page contains element    xpath=${profileMenuButtonDelivery}
+  Click Element    xpath=${profileMenuButtonDelivery}
   wait until page contains element    xpath=${profileMenuButtonAddAdress}
 
 fillAdress
@@ -582,7 +600,6 @@ fillAdressPartial
   sleep    1s
   input text    xpath=${inputAdressHouse}    ${house}
   sleep    2s
-
 fillAdressPartialNoCity
 
   [Arguments]  ${city}  ${citiPick}  ${closeExpr}  ${street}   ${streetPick}  ${house}  ${building}  ${corpus}  ${entrance}  ${floor}  ${apartment}
@@ -674,6 +691,7 @@ fillRecieverPartialNoSurname
   input text    xpath=${addRecieverName}    ${name}
   input text    xpath=${addRecieverSurname}    ${surname}
   input text    xpath=${addRecieverPhone}    ${phone}
+  sleep    1s
   clear element text    xpath=${addRecieverSurname}
 
 fillRecieverPartialNoPhone
