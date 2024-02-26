@@ -46,16 +46,18 @@ robot Имя_файла.robot
 
 ## :bar_chart: Отчеты о прохождении тестов доступны в Allure
 
-### <img width="3%" title="Allure" src="img/logo/Allure.svg"> Allure
 
 #### Главная страница
 
-<img src="img/screen/AllureMain.jpg" alt="Allure"/>
+<img src="img/screen /1.png" alt="Allure"/>
+
+<img src="img/screen /2.png" alt="Allure"/> 
 
 #### Графики
 
-<img src="img/screen/AllureGraph.jpg" alt="Allure"/>
+<img src="img/screen /3.png" alt="Allure"/> 
 
+<img src="img/screen /4.png" alt="Allure"/> 
 #### Тесты
 
 <img src="img/screen/AllureTests.jpg" alt="Allure"/>
