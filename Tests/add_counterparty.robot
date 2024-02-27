@@ -52,6 +52,8 @@ ${delete_receiver_Button_canceled}    //div[@class='css-1ej6fkx e1x4yvjg0']//but
 
 #Профиль_юрлицо
 ${legal_company}            //a[@data-meta-name='ProfileMenu_Item_Компании']
+${company_form_com}          //div[contains(text(),'Коммерческая организация')]
+${company_form_gos}         //div[contains(text(),'Госучереждение')]
 ${legal_comp}               //a[contains(text(),'Компании')]                                 #компании
 ${add_counterparty}         //span[contains(text(),'Добавить контрагента')]                  #добавить контрагента
 ${legal_company_form}       //input[@name='Contractor_legalForm']                            #правовая форма
@@ -292,7 +294,7 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
     sleep    4s
   #  click element   ${сontinue_without_details}
 
-Добавить контрагента ЮР
+Добавить контрагента ЮР(банк)
     Open browser    ${main_page}   ${browser}
     Maximize Browser Window
     click element   ${catalogButton}
@@ -346,6 +348,124 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
     click element   ${add_counterparty_continue}
     sleep    4s
    # click element   ${сontinue_without_details}
+
+Добавить контрагента ЮР (Коммерческая организация)
+    Open browser    ${main_page}   ${browser}
+    Maximize Browser Window
+    click element   ${catalogButton}
+    input text      ${login_input_field}     ${login}    # заменить на ${login}    для st
+    input password  ${login_pass_field}      ${password}   # заменить на ${password} для
+    Wait Until Page Contains Element         ${the_login_button_submit}
+    click element   ${the_login_button_submit}
+    click element   ${Profile}
+    click element   ${legal_company}
+    sleep    1s
+ #  get text         ${company_text}
+    click element   ${add_counterparty}
+    sleep    1s
+    click element   ${legal_company_form}
+    sleep    1s
+    click element   ${company_form_com}
+    sleep    2s
+    ${random_inn}=    Get Random INN UL
+    input text      ${legal_field_inn}        ${random_inn}
+    sleep    2s
+    click element   ${form_continue}
+    sleep    5s
+    input text      ${legal_name_company}       ${legal_name_company_text}
+    input text      ${legal_OGRN}               ${legal_OGRN_text}
+    input text      ${legal_kpp}                ${legal_kpp_text}
+    input text      ${legal_index}              ${legal_index_text}
+    input text      ${legal_city}               ${legal_city_text}
+    input text      ${legal_street}             ${legal_street_text}
+    input text      ${legal_house}              ${legal_house_text}
+    input text      ${legal_housing}            ${legal_housing_text}
+    input text      ${legal_apartment}          ${legal_apartment_text}
+    input text      ${legal_additional}         ${legal_additional_text}
+    input text      ${legal_bik}                ${legal_bik_text}
+    sleep   3s
+    input text      ${legal_bankName}            ${legal_bankName_text}
+    sleep   3s
+    input text      ${legal_bankCity}            ${legal_bankCity_text}
+    sleep    3s
+    input text      ${legal_bankAccount}         ${legal_bankAccount_text}
+    input text      ${leagal_cor}                ${leagal_cor_text}
+    sleep    3s
+    input text      ${legal_contactPerson}       ${legal_contactPerson_text}
+    input text      ${legal_placeholder}         ${legal_placeholder_text}
+    input text      ${legal_corpEmail}           ${legal_corpEmail_text}
+    input text      ${legal_userPosition}        ${legal_userPosition_text}
+    input text      ${legal_directorFullName}    ${legal_directorFullName_text}
+    input text      ${legal_directorEmail}       ${legal_directorEmail_text}
+    input text      ${legal_chiefAccountant}     ${legal_chiefAccountant_text}
+    input text      ${legal_AccountantEmail}     ${legal_AccountantEmail_text}
+    sleep    2s
+    click element   ${add_counterparty_continue}
+    sleep    4s
+   # click element   ${сontinue_without_details}
+
+
+
+Добавить контрагента ЮР (Госучереждение)
+    Open browser    ${main_page}   ${browser}
+    Maximize Browser Window
+    click element   ${catalogButton}
+    input text      ${login_input_field}     ${login}    # заменить на ${login}    для st
+    input password  ${login_pass_field}      ${password}   # заменить на ${password} для
+    Wait Until Page Contains Element         ${the_login_button_submit}
+    click element   ${the_login_button_submit}
+    click element   ${Profile}
+    click element   ${legal_company}
+    sleep    1s
+ #  get text         ${company_text}
+    click element   ${add_counterparty}
+    sleep    1s
+    click element   ${legal_company_form}
+    sleep    1s
+    click element   ${company_form_gos}
+    sleep    2s
+    ${random_inn}=    Get Random INN UL
+    input text      ${legal_field_inn}        ${random_inn}
+    sleep    2s
+    click element   ${form_continue}
+    sleep    5s
+    input text      ${legal_name_company}       ${legal_name_company_text}
+    input text      ${legal_OGRN}               ${legal_OGRN_text}
+    input text      ${legal_kpp}                ${legal_kpp_text}
+    input text      ${legal_index}              ${legal_index_text}
+    input text      ${legal_city}               ${legal_city_text}
+    input text      ${legal_street}             ${legal_street_text}
+    input text      ${legal_house}              ${legal_house_text}
+    input text      ${legal_housing}            ${legal_housing_text}
+    input text      ${legal_apartment}          ${legal_apartment_text}
+    input text      ${legal_additional}         ${legal_additional_text}
+    input text      ${legal_bik}                ${legal_bik_text}
+    sleep   3s
+    input text      ${legal_bankName}            ${legal_bankName_text}
+    sleep   3s
+    input text      ${legal_bankCity}            ${legal_bankCity_text}
+    sleep    3s
+    input text      ${legal_bankAccount}         ${legal_bankAccount_text}
+    input text      ${leagal_cor}                ${leagal_cor_text}
+    sleep    3s
+    input text      ${legal_contactPerson}       ${legal_contactPerson_text}
+    input text      ${legal_placeholder}         ${legal_placeholder_text}
+    input text      ${legal_corpEmail}           ${legal_corpEmail_text}
+    input text      ${legal_userPosition}        ${legal_userPosition_text}
+    input text      ${legal_directorFullName}    ${legal_directorFullName_text}
+    input text      ${legal_directorEmail}       ${legal_directorEmail_text}
+    input text      ${legal_chiefAccountant}     ${legal_chiefAccountant_text}
+    input text      ${legal_AccountantEmail}     ${legal_AccountantEmail_text}
+    sleep    2s
+    click element   ${add_counterparty_continue}
+    sleep    4s
+   # click element   ${сontinue_without_details}
+
+${company_form_com}           //div[contains(text(),'Коммерческая организация')]
+${company_form_gos}         //div[contains(text(),'Госучереждение')]
+
+
+
 
 
 *** Keywords ***
