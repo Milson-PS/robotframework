@@ -461,10 +461,6 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
     sleep    4s
    # click element   ${сontinue_without_details}
 
-${company_form_com}           //div[contains(text(),'Коммерческая организация')]
-${company_form_gos}         //div[contains(text(),'Госучереждение')]
-
-
 
 
 
