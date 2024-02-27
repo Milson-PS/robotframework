@@ -1,7 +1,6 @@
 # Created by Иван at 24.02.2024
 *** Settings ***
 Library  SeleniumLibrary
-Library  inn_generator.py
 *** Keywords ***
 
 *** Variables ***
@@ -35,16 +34,16 @@ ${CompRegNext1}         //button[@class='e4uhfkv0 react-ssr-app-btob-gh3izc e4mg
 ${CompRegNext1_2}         //button[@class='e4uhfkv0 react-ssr-app-btob-gh3izc e4mggex0' and @data-meta-disabled="true"]
 # Список полей после заполнения ИНН и правовой формы:
 # Поля "организации":
-${CompanyName}           //input[@name='Company_companyName' and @class="react-ssr-app-btob-1u9ewb3 ecmx7fl0"]
-${LegalCompanyName}      //input[@name='Company_legalCompanyName' and @class="react-ssr-app-btob-1u9ewb3 ecmx7fl0"]
-${CompanyOGRN}           //input[@name='Company_ogrn' and @class="react-ssr-app-btob-1u9ewb3 ecmx7fl0"]
+${CompanyName}           //input[@name='Company_companyName' and @class="react-ssr-app-btob-1977rpo ecmx7fl0"]
+${LegalCompanyName}      //input[@name='Company_legalCompanyName' and @class="react-ssr-app-btob-1977rpo ecmx7fl0"]
+${CompanyOGRN}           //input[@name='Company_ogrn' and @class="react-ssr-app-btob-1977rpo ecmx7fl0"]
 ${ApplyCookies}         //button[@class='e4uhfkv0 react-ssr-app-btob-1lxdbiq e4mggex0']
 ${CompanySize}          //input[@name="Company_companySize"]
 ${CompanySize1}         //div[.='от 0 до 15' and @class='e1i7snhg0 react-ssr-app-btob-zb5ocs e17hwyhm0']
 ${CompanySize2}         //div[.='от 16 до 50' and @class='e1i7snhg0 react-ssr-app-btob-zb5ocs e17hwyhm0']
 ${CompanySize3}         //div[.='от 51 до 1000' and @class='e1i7snhg0 react-ssr-app-btob-zb5ocs e17hwyhm0']
 ${CompanySize4}         //div[.='1000 +' and @class='e1i7snhg0 react-ssr-app-btob-zb5ocs e17hwyhm0']
-${CompanyIndustry}      //input[@name='Company_industry' and @class="react-ssr-app-btob-1u9ewb3 ecmx7fl0"]
+${CompanyIndustry}      //input[@name='Company_industry' and @class="react-ssr-app-btob-1977rpo ecmx7fl0"]
 #Отрасль:
 ${CompanyIndustrySelect}      //div[@class='e1i7snhg0 react-ssr-app-btob-zb5ocs e17hwyhm0'][contains(text(),'Банк')]
 ${CompanyIndustry1}              //div[@class="e1i7snhg0 react-ssr-app-btob-zb5ocs e17hwyhm0"][contains(text(),'Банк')]
@@ -116,7 +115,7 @@ ${ButtonNext2}      //button[@class='e4uhfkv0 react-ssr-app-btob-gh3izc e4mggex0
 *** Test Cases ***
 
 Успешная авторизация:
-  Open Browser   https://www.citilink.stage.citilink.lt   chrome     options=add_argument("--ignore-certificate-errors")
+  Open Browser   https://www.citilink.stage.citilink.lt/     chrome     options=add_argument("--ignore-certificate-errors")
   Maximize Browser Window
   Click Element    ${catalogButton}
   Input Text    login    test30@example.com
@@ -130,7 +129,7 @@ ${ButtonNext2}      //button[@class='e4uhfkv0 react-ssr-app-btob-gh3izc e4mggex0
 Вход в "Кабинет для бизнеса":
 
     Click element    ${LKBuisness}
-    Wait until page contains    Представителям компаний
+    Wait until page contains    Компании
     Click element    ${RegNewCompany}
     Wait until page contains    Добавить компанию
 
@@ -158,8 +157,7 @@ ${ButtonNext2}      //button[@class='e4uhfkv0 react-ssr-app-btob-gh3izc e4mggex0
             Wait until page contains    Поле должно содержать не менее 10 символов
                 Input text  ${CompInn}   545465545454
                 Click element  ${CompRegNext1_2}
-                    ${random_inn}=    Get Random INN FL
-                    Input text  ${CompInn}   ${random_inn}
+                    Input text  ${CompInn}   887836906202
                     Sleep    5s
                     Click element  ${CompRegNext1}
 

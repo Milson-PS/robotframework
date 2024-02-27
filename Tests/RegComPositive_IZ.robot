@@ -1,7 +1,6 @@
 # Created by Иван at 18.02.2024
 *** Settings ***
 Library  SeleniumLibrary
-Library  inn_generator.py
 *** Keywords ***
 
 *** Variables ***
@@ -29,13 +28,13 @@ ${CompInn}               //input[@name='Company_inn']
 ${CompRegNext1}         //button[@class='e4uhfkv0 react-ssr-app-btob-gh3izc e4mggex0']
 # Список полей после заполнения ИНН и правовой формы:
 # Поля "организации":
-${CompanyName}           //input[@name='Company_companyName' and @class="react-ssr-app-btob-1u9ewb3 ecmx7fl0"]
-${LegalCompanyName}      //input[@name='Company_legalCompanyName' and @class="react-ssr-app-btob-1u9ewb3 ecmx7fl0"]
-${CompanyOGRN}           //input[@name='Company_ogrn' and @class="react-ssr-app-btob-1u9ewb3 ecmx7fl0"]
+${CompanyName}           //input[@name='Company_companyName' and @class="react-ssr-app-btob-1977rpo ecmx7fl0"]
+${LegalCompanyName}      //input[@name='Company_legalCompanyName' and @class="react-ssr-app-btob-1977rpo ecmx7fl0"]
+${CompanyOGRN}           //input[@name='Company_ogrn' and @class="react-ssr-app-btob-1977rpo ecmx7fl0"]
 ${ApplyCookies}         //button[@class='e4uhfkv0 react-ssr-app-btob-1lxdbiq e4mggex0']
 ${CompanySize}          //input[@name="Company_companySize"]
 ${CompanySize1}         //div[.='от 16 до 50' and @class='e1i7snhg0 react-ssr-app-btob-zb5ocs e17hwyhm0']
-${CompanyIndustry}      //input[@name='Company_industry' and @class="react-ssr-app-btob-1u9ewb3 ecmx7fl0"]
+${CompanyIndustry}      //input[@name='Company_industry' and @class="react-ssr-app-btob-1977rpo ecmx7fl0"]
 ${CompanyIndustrySelect}      //div[@class='e1i7snhg0 react-ssr-app-btob-zb5ocs e17hwyhm0'][contains(text(),'Банк')]
 
 # Поля "Юридический адрес":
@@ -69,7 +68,7 @@ ${CompanyChiefAccountantEmail}            //input[@name='Company_chiefAccountant
 ${ButtonNext2}      //button[@class='e4uhfkv0 react-ssr-app-btob-gh3izc e4mggex0']
 *** Test Cases ***
 Успешная авторизация:
-  Open Browser   https://www.citilink.stage.citilink.lt    chrome     options=add_argument("--ignore-certificate-errors")
+  Open Browser   https://www.citilink.stage.citilink.lt/    chrome     options=add_argument("--ignore-certificate-errors")
   Maximize Browser Window
   Click Element    ${catalogButton}
   Input Text    login    test30@example.com
@@ -83,7 +82,7 @@ ${ButtonNext2}      //button[@class='e4uhfkv0 react-ssr-app-btob-gh3izc e4mggex0
 Вход в "Кабинет для бизнеса":
 
     Click element    ${LKBuisness}
-    Wait until page contains    Представителям компаний
+    Wait until page contains    Компании
     Click element    ${RegNewCompany}
     Wait until page contains    Добавить компанию
 
@@ -93,8 +92,7 @@ ${ButtonNext2}      //button[@class='e4uhfkv0 react-ssr-app-btob-gh3izc e4mggex0
     Click element    ${CompLegForm2}
 
 Заполнение ИНН:
-    ${random_inn}=    Get Random INN FL
-    Input text  ${CompInn}    ${random_inn}
+    Input text  ${CompInn}   887836906202
     Sleep    5s
     Click element  ${CompRegNext1}
 
@@ -115,12 +113,11 @@ ${ButtonNext2}      //button[@class='e4uhfkv0 react-ssr-app-btob-gh3izc e4mggex0
     Sleep    5s
     Wait until page contains element    ${CompanySize1}
     Click element    ${CompanySize1}
-    Click element    ${CompanyName}
+
 Отрасль:
     Click element    ${CompanyIndustry}
     Wait until page contains element    ${CompanyIndustrySelect}
     Click element    ${CompanyIndustrySelect}
-    Click element    ${CompanyName}
 
 Юридический адрес:
     Input text    ${CompanyIndex}    180000

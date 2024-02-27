@@ -1,5 +1,3 @@
-# Created by Иван at 24.02.2024
-
 *** Settings ***
 Library  SeleniumLibrary
 *** Keywords ***
@@ -60,7 +58,7 @@ ${HFeedback_2_SendButton}       //button[@class='e4uhfkv0 css-1nvnwij e4mggex0']
 
 *** Test Cases ***
 Успешная авторизация:
-  Open Browser   https://www.citilink.stage.citilink.lt   chrome     options=add_argument("--ignore-certificate-errors")
+  Open Browser   https://www.citilink.stage.citilink.lt/    chrome     options=add_argument("--ignore-certificate-errors")
   Maximize Browser Window
   Click Element    ${catalogButton}
   Input Text    login    test30@example.com
@@ -122,7 +120,7 @@ ${HFeedback_2_SendButton}       //button[@class='e4uhfkv0 css-1nvnwij e4mggex0']
 
 Открытие "Доставка":
     Click element    ${HeaderDelivery}
-        Wait until page contains   Внимание! Уважаемые клиенты
+        Wait until page contains   Мы благодарны Вам за выбор
         Sleep    3s
     Go back
     Wait until page contains    Популярные категории
@@ -160,8 +158,6 @@ ${HFeedback_2_SendButton}       //button[@class='e4uhfkv0 css-1nvnwij e4mggex0']
     Go back
     Go back
     Sleep    5s
-
-
 
 
 

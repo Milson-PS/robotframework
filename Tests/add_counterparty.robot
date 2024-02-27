@@ -1,6 +1,5 @@
 *** Settings ***
 Library           SeleniumLibrary
-Library           OperatingSystem
 Library           inn_generator.py
 Library           AllureRobotframework
 
@@ -63,13 +62,13 @@ ${legal_invoice_orders}     //a[contains(text(),'Заказы / Счета')]   
 ${legal_bonuses}            //a[@data-meta-name='ProfileMenu_Item_Бонусы']                   #бонусы
 ${legal_el_licenses}        //a[contains(text(),'Электронные лицензии и подписки')]          #эл лицензии
 ${legal_delivery}           //a[@data-meta-name='ProfileMenu_Item_Доставка']                 #доставка
-${legal_staff}              //a[@data-meta-name='ProfileMenu_Item_Сотрудники']               #сотрудники
+${legal_staff}              //a[contains(text(),'Сотрудники')]                               #сотрудники
 ${legal_exit_form}          //span[@class='e1ys5m360 e106ikdt0 css-1ny71b e1gjr6xo0']        #выйти
 #Компания
 ${company_form_ip}           //div[contains(text(),'ИП')]                                     #инн
 ${legal_kpp}                 //input[@name='Contractor_kpp']                                  #кпп
 ${legal_field_inn}           //input[@name='Contractor_inn']                                  #поле ввода инн
-${legal_staff_text}          //h2[contains(text(),'Компании')]                                #текст на форме сотрудников
+${legal_staff_text}          //h1[contains(text(),'Сотрудники')]                              #текст на форме сотрудников
 ${legal_name_company}        //input[@name='Contractor_legalCompanyName']                     #юридическое наименоваение компании
 ${legal_OGRN}                //input[@name='Contractor_ogrn']                                 #огрн
 #Юридический адрес
@@ -108,6 +107,9 @@ ${number2}  71114442222
 ${company_text}                      //h2[@class='e114sczy0 eml1k9j0 react-ssr-app-btob-148euz e1gjr6xo0']
 ${company_text_inn}                  613224381022
 ${legal_invoice_order_text}          //h1[contains(text(),'Личный кабинет')]
+${legal_form_trio}                   //a[contains(text(),'ООО "ТриО"')]
+${legal_form_maks}                   //a[contains(text(),'Максим')]
+${form_maks}                         //span[contains(text(),'Максим')]
 ${legal_bonuses_text}                //span[@class='e1ys5m360 e106ikdt0 css-uq8n7d e1gjr6xo0']
 ${legal_el_licenses_text}            //strong[contains(text(),'Баланс пользователя:')]
 ${legal_delivery_text}               //h2[@class='e114sczy0 eml1k9j0 css-qy8up7 e1gjr6xo0']
@@ -143,22 +145,22 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
 
 
 *** Test Cases ***
-Вход в лк
-   Open browser     ${main_page}   ${browser}
-   Maximize Browser Window
-   click element       ${catalogButton}
-   input text       ${login_input_field}    ${login}    # заменить на ${login}    для stage
-   input password   ${login_pass_field}     ${password}   # заменить на ${password} для stage
-   Wait Until Page Contains Element         ${the_login_button_submit}
-   click element    ${the_login_button_submit}
-   close browser
+#Вход в лк
+#   Open browser     ${main_page}   ${browser}
+#   Maximize Browser Window
+#   click element       ${catalogButton}
+#   input text       ${login_input_field}    ${login}
+#   input password   ${login_pass_field}     ${password}
+#   Wait Until Page Contains Element         ${the_login_button_submit}
+#   click element    ${the_login_button_submit}
+#   close browser
 
-Смена пользователя + Навигация
+Смена пользователя
     Open browser     ${main_page}   ${browser}
     Maximize Browser Window
     click element       ${catalogButton}
-    input text       ${login_input_field}    ${login}    # заменить на ${login}    для stage
-    input password   ${login_pass_field}     ${password}   # заменить на ${password} для stage
+    input text       ${login_input_field}    ${login}
+    input password   ${login_pass_field}     ${password}
     Wait Until Page Contains Element         ${the_login_button_submit}
     click element      ${the_login_button_submit}
     click element       ${Profile}
@@ -166,12 +168,36 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
     sleep    1s
     click element       ${change_user}
     sleep    2s
-
-#навигация
     click element       ${Profile}
-    click element       ${legal_comp}
+    click element       ${switch_profile}
+    sleep    1s
+    click element       ${change_user}
+    sleep    1s
+    click element       ${Profile}
+    click element       ${switch_profile}
+    sleep    1s
+    click element       ${legal_form_maks}
+    get text            ${form_maks}
+    close browser
+
+Навигация
+    Open browser     ${main_page}   ${browser}
+    Maximize Browser Window
+    click element       ${catalogButton}
+    input text       ${login_input_field}    ${login}
+    input password   ${login_pass_field}     ${password}
+    Wait Until Page Contains Element         ${the_login_button_submit}
+    click element      ${the_login_button_submit}
+    click element       ${Profile}
+    click element       ${switch_profile}
+    sleep    1s
+    click element       ${legal_form_trio}
     sleep    2s
-    get text            ${legal_comp_text}
+#company
+    click element       ${Profile}
+    click element    ${legal_comp}
+    sleep    2s
+    get text        ${legal_comp_text}
     go back
 #invoice_orders
    click element       ${Profile}
@@ -206,6 +232,8 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
 #exit
    click element       ${Profile}
    click element    ${legal_exit_form}
+   sleep    2s
+   close browser
 
 
 
@@ -214,8 +242,8 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
     Open browser    ${main_page}   ${browser}
     Maximize Browser Window
     click element   ${catalogButton}
-    input text      ${login_input_field}     ${login}    # заменить на ${login}    для stage
-    input password  ${login_pass_field}      ${password}   # заменить на ${password} для stage
+    input text      ${login_input_field}     ${login}
+    input password  ${login_pass_field}      ${password}
     Wait Until Page Contains Element         ${the_login_button_submit}
     click element   ${the_login_button_submit}
     click element   ${Profile}
@@ -262,7 +290,7 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
     sleep    2s
     click element   ${add_counterparty_continue}
     sleep    4s
-    click element   ${сontinue_without_details}
+  #  click element   ${сontinue_without_details}
 
 Добавить контрагента ЮР
     Open browser    ${main_page}   ${browser}
@@ -320,7 +348,7 @@ ${random_inn}=    Get Random INN UL     #ЮР лицо
    # click element   ${сontinue_without_details}
 
 
-#*** Keywords ***
+*** Keywords ***
 
 
 
